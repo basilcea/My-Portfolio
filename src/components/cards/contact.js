@@ -109,7 +109,7 @@ render(){
        <Activity><FaCheckCircle/>  Front-end      </Activity> 
         <Activity><FaCheckCircle/> Back-end      </Activity>
         </Features>
-        <Form name='contact' data-netlify="true" data-netlify-honeypot="bot-field" onSubmit = {this.handleSubmit}>
+        <Form onSubmit = {this.handleSubmit}>
         <input type='email' value={this.state.email} name='email' placeholder="Your Email" onChange={this.change}  required/>
         <input type='text' value={this.state.name} name='name' placeholder="Your Name" onChange={this.change}    required/>
         <Textarea name='message'  value={this.state.message} placeholder= 'Hello Basil , i would like to discuss.....' onChange={this.change}   required/>
