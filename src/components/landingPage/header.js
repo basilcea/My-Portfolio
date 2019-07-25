@@ -2,7 +2,7 @@ import React, {} from "react";
 import styled from "styled-components";
 import CarouselContainer from "./carouselContainer";
 import Navbar from "./navbar/navContainer";
-import { TimelineLite } from "gsap/all";
+import { TimelineLite } from "gsap";
 
 
 const HeaderContainer = styled.div`

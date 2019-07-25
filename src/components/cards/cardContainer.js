@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import { TimelineLite } from "gsap/all";
+import { TimelineLite } from "gsap";
 import { CarouselInfo } from "../../data";
 const Card = styled.div`
   ${props =>
