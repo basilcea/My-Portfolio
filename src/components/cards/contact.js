@@ -89,7 +89,7 @@ change = (e) => {
 }
 
 handleSubmit = e => {
-  fetch("app.netlify.com/sites/ogbonnabasil/forms", {
+  fetch("/forms", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: encode({ "form-name": "contact", ...this.state })
