@@ -65,8 +65,6 @@ const Works  = (props) => {
      
         <Actiondiv>{
         }
-        <Previous onClick ={() => goPrevious()}> <FaSignOutAlt /></Previous>
-        <Next onClick ={() => goNext()}> <FaSignOutAlt /></Next>
         </Actiondiv>
             </Div>
          

@@ -115,7 +115,6 @@ render(){
         <Textarea name='message'  value={this.state.message} placeholder= 'Hello Basil , i would like to discuss.....' onChange={this.change}   required/>
         <input type='submit'  value='Send Message'/>
         </Form>
-        <Previous onClick={()=>this.props.action(1)}> <FaSignOutAlt /></Previous>
         </div>
     )
 }

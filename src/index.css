@@ -16,7 +16,7 @@ code {
 }
 
 form{
-display:flex;
+display:none;
 border-radius:10px;
 flex-direction:column;
 width:80%;
