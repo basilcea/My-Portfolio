@@ -48,7 +48,7 @@ const About = () => {
        <ScrollAnimation animateIn="fadeIn" animateOut='fadeOut' style={{width:'40%'}}><Side></Side></ScrollAnimation>
       <Details>
       <ScrollAnimation animateIn="fadeInUp" animateOut='fadeOut' style={{width:'100%'}}>
-        <h1>About Me</h1>
+        <h2>About Me</h2>
 
         <Initial>Firstly, I love coding!</Initial>
         <p>
