@@ -7,14 +7,17 @@ const Container = styled.div`
   width: 85%;
   margin-left: 15%;
   display: flex;
+  height:100vh;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
 `;
 const Details = styled.div`
   width: 45%;
   margin-right: 10%;
   text-align: justify;
+  h1{
+    color:rgb(32, 53, 67)
+  }
   p {
     line-height: 22px;
     font-size: 0.9em;
@@ -41,7 +44,7 @@ const Initial = styled.div`
 `;
 const About = () => {
   return (
-    <Container id={'about'}>
+    <Container>
        <ScrollAnimation animateIn="fadeIn" animateOut='fadeOut' style={{width:'40%'}}><Side></Side></ScrollAnimation>
       <Details>
       <ScrollAnimation animateIn="fadeInUp" animateOut='fadeOut' style={{width:'100%'}}>

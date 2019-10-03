@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {NavLink} from 'react-router-dom'
 
 const Container = styled.div `
     width:7%;
@@ -37,15 +38,15 @@ a{  height:100%;
 `
 const Navbar = (props) => {
     const onclicked=()=>{
-        
+
     }
     return(
         <Container>
-            <NavTab onClick={()=>onclicked()}><a href ={'/#home'}>Home</a></NavTab>
-            <NavTab onClick={()=>onclicked()}><a href ={'/#about'} >About</a></NavTab>
-            <NavTab onClick={()=>onclicked()}><a href ={'/#skills'}>Skills</a></NavTab>
-            <NavTab onClick={()=>onclicked()}><a href={'/#projects'}>Projects</a></NavTab>
-            <NavTab onClick={()=>onclicked()}><a href={'/#contact'}>Contact</a></NavTab>
+            <NavTab onClick={()=>onclicked()}><NavLink to ={'/'}>Home</NavLink></NavTab>
+            <NavTab onClick={()=>onclicked()}><NavLink to ={'/about'} >About</NavLink></NavTab>
+            <NavTab onClick={()=>onclicked()}><NavLink to ={'/skills'}>Skills</NavLink></NavTab>
+            <NavTab onClick={()=>onclicked()}><NavLink to={'/projects'}>Projects</NavLink></NavTab>
+            <NavTab onClick={()=>onclicked()}><NavLink to={'/contact'}>Contact</NavLink></NavTab>
         </Container>
     )
 }

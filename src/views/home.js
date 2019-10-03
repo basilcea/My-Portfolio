@@ -32,11 +32,13 @@ const Hero = styled.div`
   }
 `;
 const Hello = styled.p`
-  color: rgb(32, 53, 67);
+  background-color: rgb(32, 53, 67);
   width: 60%;
-  border-radius: 50%;
+  color:white;
+  border-radius: 2px;
+  text-align:center;
   font-size: 1.2em;
-  height: 5%;
+  line-height: 30px;
 `;
 const Description = styled.div`
     height:10%
@@ -85,26 +87,19 @@ const OuterRadius = styled.div `
     border-radius:50%
     width:70%;
     height:50%;
-    ${props => (props.mode === "dark" ? `background-color:black` : `background-color:#efefef`)};
+    background-color:rgb(32, 53, 67);
     justify-content:center;
     align-items:center;
     display:flex;
+    img{
+      width:90%;
+      height:90%;
+  }
     `
-const InnerRadius = styled.div`
-border-radius:50%;
-${props => (props.mode === "dark" ? `background-color:rgb(32, 53, 67)` : `background-color:lightgrey`)};
-width:90%;
-padding:5%;
-height:90%;
-img{
-    width:100%;
-    height:100%;
-}
-`
 
 const Home = () => {
   return (
-    <Container id={'home'}>
+    <Container>
       <Hero>
         <ScrollAnimation animateIn="fadeInUp"  style={{width:'100%'}}>
         <Hello>Hello I'm</Hello>
@@ -158,9 +153,9 @@ const Home = () => {
       <ProfilePix>
       
         <OuterRadius>
-          <InnerRadius>
+        
                <img src={image} alt =''/>
-          </InnerRadius>
+    
         </OuterRadius>
        
       </ProfilePix>
