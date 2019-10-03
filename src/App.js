@@ -1,29 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
 import Home from './views/home';
+import About from './views/about'
+import Navbar from './components/navbar';
 import './App.css'
 const AppContainer = styled.div`
+${props =>
+  props.mode === "dark"
+    ? `background-color:black`
+    : `background-color:white `};
+  display:flex;
   width:100%;
+  flex-direction:column;
   margin-top:0% ;
   @media(max-width:750px){
     margin-top:0%;
   }
 
 `;
-class App extends React.Component{
-  constructor(props){
-    super(props)
-    this.state =({
-    })
-
-  }
-  render(){
+const App = () =>{
     return (
       <AppContainer>
-        <Home />
+        <Navbar/>
+        <Home  />
+        <About />
       </AppContainer>
     );
   }
-}
-
 export default App;

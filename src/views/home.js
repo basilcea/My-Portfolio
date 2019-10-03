@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+  import ScrollAnimation from 'react-animate-on-scroll';
+  import "../animate.css";
 import Typed from "react-typed";
 import {
   FaEnvelope,
@@ -15,31 +17,26 @@ const Container = styled.div`
   margin: 0;
   display: flex;
   align-items: center;
-  margin-left: 10%;
   width: 90%;
+  margin-left:2%;
   height: 100vh;
-  ${props =>
-    props.mode === "dark"
-      ? `background-color:black`
-      : `background-color:white `};
 `;
 const Hero = styled.div`
   height: 50%;
-  width:45%;
-  margin-left: 10%;
+  width:100%;
+  margin-left: 15%;
   h1 {
     font-size: 3em;
-    ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
+    ${props => (props.mode === "dark" ? `color:white` : `color:#3d3d3d `)};
     margin-bottom: 2px;
   }
 `;
 const Hello = styled.p`
-  color: white;
-  width: 40%;
-  background-color: blue;
-  text-align: center;
+  color: rgb(32, 53, 67);
+  width: 60%;
+  border-radius: 50%;
   font-size: 1.2em;
-  height: 8%;
+  height: 5%;
 `;
 const Description = styled.div`
     height:10%
@@ -50,13 +47,13 @@ const Description = styled.div`
     justify-content:flex-start;
     font-size:1.5em;
     font-weight:bold;
-    ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
+    ${props => (props.mode === "dark" ? `color:white` : `color:#3d3d3d `)};
 `;
 const Detail = styled.p`
-  ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
+  ${props => (props.mode === "dark" ? `color:white` : `color:#3d3d3d`)};
   &:hover {
     span {
-      color: blue;
+      color: grey;
     }
   }
   span {
@@ -71,18 +68,14 @@ const Socials = styled.div`
   width:40%;
   a{  display:flex;
      align-items:center;
-      font-size:1.5em
+      font-size:1.5em;
       justify-content:center;
       text-decoration:none;
-      ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
-      &:hover{
-        background-color:blue;
-        background-position:center;
-      }
+      ${props => (props.mode === "dark" ? `color:white` : `color:#3d3d3d `)};
   }
 `;
 const ProfilePix = styled.div`
-    width:55%;
+    width:100%;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -90,7 +83,7 @@ const ProfilePix = styled.div`
 `
 const OuterRadius = styled.div `
     border-radius:50%
-    width:60%;
+    width:70%;
     height:50%;
     ${props => (props.mode === "dark" ? `background-color:black` : `background-color:#efefef`)};
     justify-content:center;
@@ -99,7 +92,7 @@ const OuterRadius = styled.div `
     `
 const InnerRadius = styled.div`
 border-radius:50%;
-${props => (props.mode === "dark" ? `background-color:black` : `background-color:lightgrey`)};
+${props => (props.mode === "dark" ? `background-color:rgb(32, 53, 67)` : `background-color:lightgrey`)};
 width:90%;
 padding:5%;
 height:90%;
@@ -111,15 +104,9 @@ img{
 
 const Home = () => {
   return (
-    <Container>
-          <ProfilePix>
-        <OuterRadius>
-          <InnerRadius>
-              <img src={image} alt =''/>
-          </InnerRadius>
-        </OuterRadius>
-      </ProfilePix>
+    <Container id={'home'}>
       <Hero>
+        <ScrollAnimation animateIn="fadeInUp"  style={{width:'100%'}}>
         <Hello>Hello I'm</Hello>
         <h1>Ogbonna Basil</h1>
         <Description>
@@ -165,7 +152,19 @@ const Home = () => {
             <FaMedium />
           </a>
         </Socials>
+        </ScrollAnimation >
       </Hero>
+      <ScrollAnimation animateIn="fadeIn" animateOut='fadeOut' style={{width:'100%'}}>
+      <ProfilePix>
+      
+        <OuterRadius>
+          <InnerRadius>
+               <img src={image} alt =''/>
+          </InnerRadius>
+        </OuterRadius>
+       
+      </ProfilePix>
+      </ScrollAnimation>
     </Container>
   );
 };
