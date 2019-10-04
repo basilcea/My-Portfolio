@@ -81,13 +81,13 @@ const About = () => {
           <span>CSS</span>
           <span>Javascript</span>
           <span>React</span>
-          <span>Animations</span>
+          <span>Node Js</span>
           </p>
-         <p> <span>Node Js</span>
-          <span>Express</span>
+         <p> <span>REST</span>
+          <span>GraphQl</span>
           <span> API </span>
-          <span>Testing</span>
-          <span>Python</span>
+          <span>Postgres</span>
+          <span>MongoDb</span>
         </p>
         </ScrollAnimation>
       </Details>

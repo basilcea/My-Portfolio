@@ -33,6 +33,7 @@ const Hero = styled.div`
 `;
 const Hello = styled.p`
   background-color: rgb(32, 53, 67);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   width: 60%;
   color:white;
   border-radius: 2px;
@@ -85,8 +86,8 @@ const ProfilePix = styled.div`
 `
 const OuterRadius = styled.div `
     border-radius:50%
-    width:70%;
-    height:50%;
+    width:80%;
+    height:55%;
     background-color:rgb(32, 53, 67);
     justify-content:center;
     align-items:center;
@@ -94,6 +95,7 @@ const OuterRadius = styled.div `
     img{
       width:90%;
       height:90%;
+      border-radius:50%;
   }
     `
 
@@ -102,14 +104,14 @@ const Home = () => {
     <Container>
       <Hero>
         <ScrollAnimation animateIn="fadeInUp"  style={{width:'100%'}}>
-        <Hello>Hello I'm</Hello>
+        <Hello>-------      Hello I'm     -------</Hello>
         <h1>Ogbonna Basil</h1>
         <Description>
           <Typed
             strings={[
               "Frontend Engineer",
               "Backend Engineer",
-              "Mobile Engineer",
+              "Mobile App Engineer",
               "Software Engineer"
             ]}
             typespeed={100}

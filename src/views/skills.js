@@ -7,19 +7,15 @@ import { FaCode, FaDesktop, FaMobileAlt } from "react-icons/fa";
 import Html from "../assests/Html5.svg";
 import CSS from "../assests/Css3.svg";
 import Javascript from "../assests/Javascript.svg";
-import Python from "../assests/Python.svg";
 import Reacts from "../assests/React.svg";
 import Node from "../assests/Nodejs.svg";
-import Express from "../assests/Express.svg";
 import Github from "../assests/Github.svg";
 import Heroku from "../assests/Heroku.svg";
 import Mongo from "../assests/MongoDb.svg";
 import Mocha from "../assests/Mocha.svg";
 import Postgres from "../assests/Postgresql.svg";
-import Redis from "../assests/Redis.svg";
-import Slack from "../assests/Slack.svg";
 import Trello from "../assests/Trello.svg";
-import Visual from "../assests/Visual.svg";
+
 
 const skills = [
   {
@@ -27,21 +23,21 @@ const skills = [
     icon: <FaDesktop />,
     name: "FRONT END DEVELOPMENT",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+      "Create responsive user pages for apps and websites."
   },
   {
     id: 2,
     icon: <FaCode />,
     name: "BACKEND-API DEVELOPMENT",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+      "Build API's and backend solutions to interact with severs and databases."
   },
   {
     id: 3,
     icon: <FaMobileAlt />,
     name: "MOBILE APP DEVELOPMENT",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
+      "Create applications for mobile phones and Progessive Web Apps."
   }
 ];
 const Container = styled.div`
@@ -53,9 +49,10 @@ const Container = styled.div`
     margin-top:5%;
   h2{
       font-size:1.5em;
-      color:rgb(32, 53, 67)
-      margin-bottom: 10vh;
+      color:rgb(32, 53, 67);
+      margin-bottom: 5vh;
   }
+  
 `;
 const Skill = styled.div`
   display: flex;
@@ -80,16 +77,29 @@ const Lower = styled.div`
   justify-content:space-between;
 `;
 const FirstPart = styled.div`
-  width:40%
+  width:50%
 `
 const SecondPart = styled.div`
-  width:50%;
+  width:40%;
+  margin-left:10%;
+`
+const Div = styled.div`
+display:flex;
+width:100%;
+justfy-content:space-between;
+span{
+    width:33%;
+    padding:4% 0;
+}
+`;
+const H = styled.h2`
+margin-left:40%
 `
 const Skills = () => {
   return (
     <Container>
       <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
-        <h2>WHAT I DO</h2>
+        <H>WHAT I DO </H>
         <Skill>
           {skills.map(skill => (
             <Skillcard key={skill.id} data={skill} />
@@ -100,11 +110,29 @@ const Skills = () => {
         <FirstPart>
           <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
             <h2>TECHNICAL SKILLS</h2>
+            <Div>
+            <span>Programming</span>
+            <span>Algorithms</span>
+            <span>Database Management</span>
+          
+            </Div>
+            <Div>
+            <span>Lean Development</span>
+            <span>Agile Development</span>
+            <span>Test Driven Development</span>
+            </Div>
+            <Div>
+            <span>User Research</span>
+            <span>Debugging</span>
+            <span>Project Management</span>
+           
+            </Div>
+        
           </ScrollAnimation>
         </FirstPart>
         <SecondPart>
         <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
-            <h2>TOOLS I USE</h2>
+            <h2>TOOLS</h2>
             <ToolKit>
               <Tools style={{ backgroundImage: `url(${Html})` }} />
               <Tools style={{ backgroundImage: `url(${CSS})` }} />
@@ -114,7 +142,7 @@ const Skills = () => {
             <ToolKit>
               <Tools style={{ backgroundImage: `url(${Postgres})` }} />
               <Tools style={{ backgroundImage: `url(${Node})` }} />
-              <Tools style={{ backgroundImage: `url(${Express})` }} />
+              <Tools style={{ backgroundImage: `url(${Trello})` }} />
               <Tools style={{ backgroundImage: `url(${Github})` }} />
             </ToolKit>
             <ToolKit>
@@ -122,12 +150,6 @@ const Skills = () => {
               <Tools style={{ backgroundImage: `url(${Mongo})` }} />
               <Tools style={{ backgroundImage: `url(${Mocha})` }} />
               <Tools style={{ backgroundImage: `url(${Postgres})` }} />
-            </ToolKit>
-            <ToolKit>
-              <Tools style={{ backgroundImage: `url(${Redis})` }} />
-              <Tools style={{ backgroundImage: `url(${Slack})` }} />
-              <Tools style={{ backgroundImage: `url(${Trello})` }} />
-              <Tools style={{ backgroundImage: `url(${Visual})` }} />
             </ToolKit>
         </ScrollAnimation>
         </SecondPart>

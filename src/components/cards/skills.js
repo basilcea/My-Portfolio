@@ -9,9 +9,8 @@ h3{
     text-align:center;
 }
 p{
-    padding:5%;
+    padding:10%;
     padding-top:1%;
-    text-align:justify;
 }
 `
 const Icon = styled.div`
@@ -21,10 +20,16 @@ font-size:2em;
 padding-top:5%
 color: rgb(32, 53, 67);
 `;
+const Clip = styled.div`
+height:10%;
+z-index:-1;
+background-color:rgb(32, 53, 67);
+clip-path: polygon(100% 0, 0 0, 0 100%);`
 
 const SkillCard = (props) => {
     return (
         <Container>
+            <Clip/>
             <Icon>{props.data.icon}</Icon>
             <h3>{props.data.name}</h3>
             <p>{props.data.description}</p>
