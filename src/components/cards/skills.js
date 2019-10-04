@@ -3,13 +3,14 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 width:30%
-height:30vh ;
+height:25vh ;
 box-shadow: -1px 2px 19px -3px rgba(196,194,196,1);
 h3{
     text-align:center;
 }
 p{
     padding:5%;
+    padding-top:1%;
     text-align:justify;
 }
 `

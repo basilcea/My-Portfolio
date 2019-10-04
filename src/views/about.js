@@ -15,8 +15,9 @@ const Details = styled.div`
   width: 45%;
   margin-right: 10%;
   text-align: justify;
-  h1{
-    color:rgb(32, 53, 67)
+  h2{
+    color:rgb(32, 53, 67);
+    font-size:1.5em;
   }
   p {
     line-height: 22px;
@@ -56,10 +57,10 @@ const About = () => {
           to a school project. While there, I started inputting the web address
           in the google search bar. He had to correct me quite a number of times
           before i got the difference. It was simple, if you need to go the
-          exact web page, put the address in the bar. But i did not know it.
+          exact web page, put the address in the address bar. But i did not know it.
           That was my first experience with computers and that was the moment i
           decided i was going to learn what there was to learn about this
-          intriguing device everyone in the cybercafe was spending time. Over
+          intriguing device everyone in the cybercafe was spending  on. Over
           the years, technology has evolved and the number of people going to
           cybercafe has drastically reduced in Nigeria but my excitement over
           technology has not.
@@ -69,7 +70,7 @@ const About = () => {
           science, and experience in building web apps. 
           </p>
           <p>My ultimate desire is to improve human lives and raise human potential
-          through software development and to contribute to making our cities
+          through software development and to contribute my quarter to making our cities
           smarter and our lives less stressful.When I am not coding, I am volunteering, listening to music, or
           playing chess.
         </p>
