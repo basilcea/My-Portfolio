@@ -191,7 +191,7 @@ const Home = () => {
               <FaMedium />
             </a>
           </Socials>
-          <Button onClick ={() =>downloading} >Download Resume</Button>
+          <Button onClick ={()=>downloading()} >Download Resume</Button>
         </ScrollAnimation>
       </Hero>
       <ScrollAnimation
