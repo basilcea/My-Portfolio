@@ -3,8 +3,9 @@ import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 import icon from "../assests/icon.png";
 import "../animate.css";
+import axios from 'axios';
 import Typed from "react-typed";
-import {Document ,Page} from 'react-pdf'
+import dotenv from  'dot-env';
 import {
   FaEnvelope,
   FaMapMarkerAlt,
@@ -129,7 +130,16 @@ outline:none;
   color:white;
 }
 `
+dotenv.config()
 const Home = () => {
+  const downloading = async() =>{
+    await axios.get('https://cors-wahala.herokuapp.com/https://www.googleapis.com/drive/v3/files/1275c99fPn4m7O3Mhs67LtLIkgVyED72f`
+   , {
+ headers: {
+   Authorization: 'Bearer ' + process.env.Token //the token is a variable which holds the token
+ }
+})
+  }
   return (
     <Container>
       <Hero>
@@ -181,7 +191,7 @@ const Home = () => {
               <FaMedium />
             </a>
           </Socials>
-          <Button >Download Resume</Button>
+          <Button onClick ={() =>downloading} >Download Resume</Button>
         </ScrollAnimation>
       </Hero>
       <ScrollAnimation

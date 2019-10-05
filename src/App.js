@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState}from 'react';
 import styled from 'styled-components';
 import Home from './views/home';
 import About from './views/about'
@@ -22,7 +22,7 @@ const App = () =>{
     return (
       <AppContainer>
         <Navbar/>
-        <Route exact path ='/' component={Home} />
+        <Route exact path ='/'  render={() => <Home />} />
         <Route path ='/about' component={About} />
         <Route path ='/skills' component={Skills} />
         <Route path ='/contact' component={Contact} />
