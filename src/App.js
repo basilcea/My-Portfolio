@@ -8,10 +8,6 @@ import Contact from './views/contact';
 import './App.css'
 import {Route} from 'react-router-dom';
 const AppContainer = styled.div`
-${props =>
-  props.mode === "dark"
-    ? `background-color:black`
-    : `background-color:white `};
   display:flex;
   width:100%;
   height:100%;
