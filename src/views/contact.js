@@ -128,7 +128,9 @@ class Contact extends React.Component {
   render() {
     return (
       <Container>
+         <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut" style={{height:'20%'}}>
         <h2>CONTACT ME</h2>
+        </ScrollAnimation>
         <Place>
           <Div>
             <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
@@ -178,7 +180,7 @@ class Contact extends React.Component {
             </ScrollAnimation>
           </Div>
           <ScrollAnimation
-            animateIn="fadeIn"
+            animateIn="fadeInUp"
             animateOut="fadeOut"
             style={{ width: "50%", height: "100%" }}
           >

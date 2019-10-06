@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Home from './views/home';
 import About from './views/about'
 import Skills from './views/skills'
+import Projects from './views/projects'
 import Navbar from './components/navbar';
 import Contact from './views/contact';
 import './App.css'
@@ -26,6 +27,7 @@ const App = () =>{
         <Route path ='/about' component={About} />
         <Route path ='/skills' component={Skills} />
         <Route path ='/contact' component={Contact} />
+        <Route path='/projects' component={Projects} />
       </AppContainer>
     );
   }

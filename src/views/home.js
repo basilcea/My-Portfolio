@@ -133,10 +133,10 @@ outline:none;
 dotenv.config()
 const Home = () => {
   const downloading = async() =>{
-    await axios.get('https://cors-wahala.herokuapp.com/https://www.googleapis.com/drive/v3/files/1275c99fPn4m7O3Mhs67LtLIkgVyED72f'
+    await axios.get('https://cors-wahala.herokuapp.com/https://www.googleapis.com/drive/v3/files/1275c99fPn4m7O3Mhs67LtLIkgVyED72f?alt=media'
    , {
  headers: {
-   Authorization: 'Bearer ' + process.env.Token //the token is a variable which holds the token
+   authorization: 'Bearer ' + process.env.Token //the token is a variable which holds the token
  }
 })
   }
