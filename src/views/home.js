@@ -28,7 +28,7 @@ const Container = styled.div`
 const Hero = styled.div`
   height: 50%;
   width: 100%;
-  margin-left: 15%;
+  margin-left: 20%;
   h1 {
     font-size: 3em;
     ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
@@ -69,7 +69,7 @@ const Detail = styled.p`
 `;
 const Socials = styled.div`
   display: flex;
-  margin-top: 5%;
+  margin: 5% 0%;
   justify-content: space-between;
   align-items: center;
   width: 40%;
@@ -117,24 +117,19 @@ const Name = styled.div`
     padding-right: 0.5%;
   }
 `;
-const Button = styled.button`
+const Button = styled.a`
   margin-top: 5%;
   background-color: inherit;
   border: 2px solid rgb(32, 53, 67);
   font-size: 1em;
   border-radius: 5px;
   height: 40px;
+  padding:10px 5px;
+  color:rgb(32, 53, 67);
+  text-decoration: none;
   outline: none;
-  a {
-    text-decoration: none;
-    width: 100%;
-    color: rgb(32, 53, 67);
-    height: 100%;
-    &:hover {
-      color: white;
-    }
-  }
   &:hover {
+    color: white;
     background-color: rgb(32, 53, 67);
   }
 `;
@@ -191,11 +186,11 @@ const Home = () => {
               <FaMedium />
             </a>
           </Socials>
-          <Button>
-            <a href={pdf} download>
+    
+            <Button href={pdf} download>
               Download Resume{" "}
-            </a>
-          </Button>
+            </Button>
+    
         </ScrollAnimation>
       </Hero>
       <ScrollAnimation
