@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa";
 import ScrollAnimation from "react-animate-on-scroll";
-import map from "../assests/map.png";
+
 import "../animate.css";
 const Container = styled.div`
   margin-left: 15%;
@@ -12,7 +12,7 @@ const Container = styled.div`
   flex-direction: column;
   h2 {
     width: 85%;
-    margin-top:7%;
+    margin-top: 7%;
     text-align: center;
     color: rgb(32, 53, 67);
   }
@@ -89,14 +89,7 @@ const Place = styled.div`
 const Div = styled.div`
   width: 50%;
 `;
-const Map = styled.div`
-  background: url(${map});
-  background-repeat: no-repeat;
-  background-size: 90% 95%;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-`;
+
 
 const encode = data => {
   return Object.keys(data)
@@ -128,8 +121,12 @@ class Contact extends React.Component {
   render() {
     return (
       <Container>
-         <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut" style={{height:'20%'}}>
-        <h2>CONTACT ME</h2>
+        <ScrollAnimation
+          animateIn="fadeInUp"
+          animateOut="fadeOut"
+          style={{ height: "20%" }}
+        >
+          <h2>CONTACT ME</h2>
         </ScrollAnimation>
         <Place>
           <Div>
@@ -184,7 +181,14 @@ class Contact extends React.Component {
             animateOut="fadeOut"
             style={{ width: "50%", height: "100%" }}
           >
-            <Map/>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15856.497204439343!2d3.3616950272125!3d6.50594572470166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c8c358b3f4b%3A0x5552cfbd43df8434!2sYaba%2C%20Oworonshoki!5e0!3m2!1sen!2sng!4v1570467602009!5m2!1sen!2sng"
+              width="600"
+              height="450"
+              frameborder="0"
+              style={{border:'0'}}
+              allowfullscreen=""
+            />
           </ScrollAnimation>
         </Place>
       </Container>

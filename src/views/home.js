@@ -3,9 +3,10 @@ import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 import icon from "../assests/icon.png";
 import "../animate.css";
-import axios from 'axios';
+import pdf from "../assests/Ogbonna Basil C.pdf";
+import axios from "axios";
 import Typed from "react-typed";
-import dotenv from  'dotenv';
+import dotenv from "dotenv";
 import {
   FaEnvelope,
   FaMapMarkerAlt,
@@ -48,7 +49,7 @@ const Description = styled.div`
   height: 5vh;
   padding-top: 0;
   display: flex;
-  margin-top:5%;
+  margin-top: 5%;
   margin-bottom: 5%;
   justify-content: flex-start;
   font-size: 1.5em;
@@ -116,30 +117,29 @@ const Name = styled.div`
     padding-right: 0.5%;
   }
 `;
-const Button = styled.button `
-margin-top:5%;
-background-color:inherit;
-color:rgb(32, 53, 67);
-border:2px solid rgb(32, 53, 67);
-font-size:1em;
-border-radius:5px;
-height:40px;
-outline:none;
-&:hover{
-  background-color:rgb(32, 53, 67);
-  color:white;
-}
-`
-dotenv.config()
-const Home = () => {
-  const downloading = async() =>{
-    await axios.get('https://cors-wahala.herokuapp.com/https://www.googleapis.com/drive/v3/files/1275c99fPn4m7O3Mhs67LtLIkgVyED72f?alt=media'
-   , {
- headers: {
-   authorization: 'Bearer ' + process.env.Token //the token is a variable which holds the token
- }
-})
+const Button = styled.button`
+  margin-top: 5%;
+  background-color: inherit;
+  border: 2px solid rgb(32, 53, 67);
+  font-size: 1em;
+  border-radius: 5px;
+  height: 40px;
+  outline: none;
+  a {
+    text-decoration: none;
+    width: 100%;
+    color: rgb(32, 53, 67);
+    height: 100%;
+    &:hover {
+      color: white;
+    }
   }
+  &:hover {
+    background-color: rgb(32, 53, 67);
+  }
+`;
+dotenv.config();
+const Home = () => {
   return (
     <Container>
       <Hero>
@@ -191,7 +191,11 @@ const Home = () => {
               <FaMedium />
             </a>
           </Socials>
-          <Button onClick ={()=>downloading()} >Download Resume</Button>
+          <Button>
+            <a href={pdf} download>
+              Download Resume{" "}
+            </a>
+          </Button>
         </ScrollAnimation>
       </Hero>
       <ScrollAnimation

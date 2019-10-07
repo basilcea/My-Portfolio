@@ -1,13 +1,14 @@
 import React ,{useState} from "react";
 import styled from 'styled-components'
 import {FaGlobe , FaGithub} from 'react-icons/fa';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "../../animate.css";
 import background from '../../assests/background.png'
 const Container = styled.div`
 width:30%;
 display:flex;
 flex-direction:column;
 height:250px;
-background-color:rgb(32, 53, 67);
 box-shadow: 1px 1px 13px -1px rgba(219,215,219,1);
 margin:1% 0%;
 border-radius: 10px 10px 0px 0px;
@@ -21,12 +22,12 @@ flex-direction:column;
   backface-visibility:hidden;
   width: 100%;
   height: 100%;
-  transform: translateY(-3%);
   position:absolute;
   img{
-    height:70%;
+    height:100%;
+    background-color:rgb(32, 53, 67);
     width:100%;
-    border-radius:5px;
+    border-radius:5px 5px 0px 0px;
     border-bottom:none;
 }
 div{
@@ -63,6 +64,8 @@ const BackDiv = styled.div`
   width: 100%;
   height: 100%;
   margin:0;
+  background-color:rgb(32, 53, 67);    
+  border-radius:5px 5px 0px 0px;
   transform: rotateY(180deg);
   padding: 5% 0%;
   backface-visibility:hidden;
@@ -115,7 +118,9 @@ const Project = props => {
   return (
     <Container transformed={transformStatus}>
         <FrontDiv>
-      <img src={props.data.icon} alt="" />
+            <ScrollAnimation animateIn="fadeIn" style={{height:'70%'}}>
+      <img src={props.data.icon} alt=""/>
+      </ScrollAnimation>
       <div>
     <span>{props.data.name}</span>
       <a href={props.data.web}><FaGlobe/></a>
@@ -127,9 +132,9 @@ const Project = props => {
    
     <p>{props.data.description}</p>
     <Highlights>
-        {props.data.responsibilities.map(responsibility => <p>- {responsibility}.</p>)}
+        {props.data.responsibilities.map(responsibility => <p key={props.data.responsibilities.indexOf(responsibility)}>- {responsibility}.</p>)}
     </Highlights>
-    <Stack>Built with: {props.data.stack.map(stack => <span> {stack}</span>)}
+    <Stack>Built with: {props.data.stack.map(stack => <span key={props.data.stack.indexOf(stack)}> {stack}</span>)}
     <Button onClick={() => setStyle()}>Go Back</Button></Stack>
 
       </BackDiv>
