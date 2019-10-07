@@ -10,6 +10,9 @@ const Container = styled.div `
     top:10vh;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index:+3;
+    @media(max-width: 800px){
+        display:none;
+    }
 `
 const NavTab = styled.div `
 height:20%;

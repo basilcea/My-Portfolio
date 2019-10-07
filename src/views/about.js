@@ -7,29 +7,64 @@ const Container = styled.div`
   width: 85%;
   margin-left: 15%;
   display: flex;
-  height:100vh;
+  height:100%;
   justify-content: space-between;
   align-items: center;
+  div{
+    width:90%;
+  }
+  @media(max-width:600px){
+    flex-direction:column;
+    margin:0;
+    width:100%;
+  }
 `;
 const Details = styled.div`
-  width: 45%;
+  width: 50%;
   margin-right: 10%;
+  margin-top:5%;
   text-align: justify;
+  @media(max-width:600px){
+    width:90%;
+    margin:0% 5%;
+  
+  }
   h2{
     color:rgb(32, 53, 67);
     font-size:1.5em;
+    @media(max-width:600px){
+      text-align:center;
+      margin:0% 5%;
+    
+    }
   }
   p {
     line-height: 22px;
     font-size: 0.9em;
     display: flex;
+    flex-wrap:wrap;
     justify-content: space-between;
+    @media(max-width:600px){
+      line-height:18px;
+      font-size:0.8em;
+      padding: 0 5%;
+    }
+  }
+  h3{
+    @media(max-width:600px){
+      margin: 0 5%;
+    }
   }
   span {
     border: 2px solid rgb(32, 53, 67);
     border-raduis: 5px;
-    width: 15%;
+    width: 18%;
+    margin-bottom:5%;
     text-align: center;
+    @media(max-width:600px){
+      line-height:18px;
+      font-size:0.8em;
+    }
   }
 `;
 const Side = styled.div`
@@ -39,16 +74,25 @@ height:80vh;
 background-size:100%;
 background-position:center;
 background-repeat:no-repeat;
+@media(max-width:600px){
+  height:40vh;
+  width:100%;
+  margin-bottom:1%;
+}
 `;
 const Initial = styled.div`
   font-weight: bold;
+  @media(max-width:600px){
+    padding-top:5%;
+    text-align:center;
+  }
 `;
 const About = () => {
   return (
     <Container>
-       <ScrollAnimation animateIn="fadeIn" animateOut='fadeOut' style={{width:'40%'}}><Side></Side></ScrollAnimation>
+       <ScrollAnimation animateIn="fadeIn"><Side></Side></ScrollAnimation>
       <Details>
-      <ScrollAnimation animateIn="fadeInUp" animateOut='fadeOut' style={{width:'100%'}}>
+      <ScrollAnimation animateIn="fadeInUp" style={{width:'100%'}}>
         <h2>About Me</h2>
 
         <Initial>Firstly, I love coding!</Initial>
@@ -82,8 +126,7 @@ const About = () => {
           <span>Javascript</span>
           <span>React</span>
           <span>Node Js</span>
-          </p>
-         <p> <span>REST</span>
+         <span>REST</span>
           <span>GraphQl</span>
           <span> API </span>
           <span>Postgres</span>

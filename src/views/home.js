@@ -24,15 +24,19 @@ const Container = styled.div`
   width: 90%;
   margin-left: 2%;
   height: 100vh;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    margin-left: 0;
+    width: 100%;
+  }
 `;
 const Hero = styled.div`
   height: 50%;
-  width: 100%;
-  margin-left: 20%;
-  h1 {
-    font-size: 3em;
-    ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
-    margin-bottom: 2px;
+  width: 45%;
+  margin-left: 15%;
+  @media (max-width: 600px) {
+    width:90%;
+    margin:0 5%
   }
 `;
 const Hello = styled.p`
@@ -44,6 +48,12 @@ const Hello = styled.p`
   text-align: center;
   font-size: 1.2em;
   line-height: 30px;
+  @media (max-width: 600px) {
+    width: 90%;
+    margin:0 5%
+    line-height: 40px;
+    font-size: 1.5em;
+  }
 `;
 const Description = styled.div`
   height: 5vh;
@@ -55,17 +65,29 @@ const Description = styled.div`
   font-size: 1.5em;
   font-weight: bold;
   ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
+  @media(max-width:600px){
+    justify-content:center;
+    font-size: 1.2em;
+  }
 `;
 const Detail = styled.p`
   ${props => (props.mode === "dark" ? `color:white` : `color:black`)};
+  @media(max-width:600px){
+    margin-left:10%;
+  }
   &:hover {
     span {
       color: grey;
     }
   }
   span {
-    padding-right: 3%;
+    margin-right: 3%;
+
   }
+  @media(max-width:600px){
+    justify-content:center;
+  }
+  
 `;
 const Socials = styled.div`
   display: flex;
@@ -73,6 +95,10 @@ const Socials = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 40%;
+  @media(max-width:600px){
+    justify-content:center;
+    width:100%;
+  }
   a {
     display: flex;
     align-items: center;
@@ -80,41 +106,66 @@ const Socials = styled.div`
     justify-content: center;
     text-decoration: none;
     ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
+    @media(max-width:600px){
+     margin-right:5%;
+    }
   }
 `;
 const ProfilePix = styled.div`
-  width: 100%;
+  width: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
+  @media (max-width: 600px) {
+    order: -1; 
+    width: 100%;
+    height:45%;
+  }
 `;
 const OuterRadius = styled.div`
     border-radius:50%
     width:80%;
-    height:55%;
+    height:60%;
     background-color:rgb(32, 53, 67);
     justify-content:center;
     align-items:center;
     display:flex;
+    @media(max-width:600px){
+      width:65%;
+      height:70%;
+    }
     img{
       width:90%;
       height:90%;
-      border-radius:50%;
   }
     `;
 const Name = styled.div`
   display: flex;
   align-items: center;
+  @media(max-width:600px){
+    justify-content:center;
+  }
   h1 {
     margin-top: 0%;
     padding-top: 3%;
+    font-size: 3em;
+    ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
+    margin-bottom: 2px;
+    @media (max-width: 600px) {
+      font-size:2em;
+      padding-top: 5%;
+    }
   }
   img {
     width: 3.5em;
     height: 4em;
     padding-top: 2%;
     padding-right: 0.5%;
+    @media (max-width: 600px) {
+      width:2.5em;
+      height:3em;
+    }
   }
 `;
 const Button = styled.a`
@@ -124,13 +175,20 @@ const Button = styled.a`
   font-size: 1em;
   border-radius: 5px;
   height: 40px;
-  padding:10px 5px;
-  color:rgb(32, 53, 67);
+  padding: 10px 5px;
+  color: rgb(32, 53, 67);
   text-decoration: none;
   outline: none;
   &:hover {
     color: white;
     background-color: rgb(32, 53, 67);
+  }
+  @media (max-width: 600px) {
+    font-size: 0.8em;
+    display:flex;
+    justify-content:center;
+    height:20px;
+    height:3em;
   }
 `;
 dotenv.config();
@@ -139,7 +197,7 @@ const Home = () => {
     <Container>
       <Hero>
         <ScrollAnimation animateIn="fadeInUp" style={{ width: "100%" }}>
-          <Hello>- - - - - - - Hello I'm - - - - - - -</Hello>
+          <Hello>- - Hello I'm - - </Hello>
           <Name>
             <img src={icon} alt="O" />
             <h1>gbonna Basil</h1>
@@ -186,24 +244,30 @@ const Home = () => {
               <FaMedium />
             </a>
           </Socials>
-    
-            <Button href={pdf} download>
-              Download Resume{" "}
-            </Button>
-    
+
+          <Button href={pdf} download>
+            Download Resume{" "}
+          </Button>
         </ScrollAnimation>
       </Hero>
-      <ScrollAnimation
-        animateIn="fadeIn"
-        animateOut="fadeOut"
-        style={{ width: "100%" }}
-      >
-        <ProfilePix>
+
+      <ProfilePix>
+        <ScrollAnimation
+          animateIn="fadeIn"
+          animateOut="fadeOut"
+          style={{
+            height: "100%",
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <OuterRadius>
             <img src={image} alt="" />
           </OuterRadius>
-        </ProfilePix>
-      </ScrollAnimation>
+        </ScrollAnimation>
+      </ProfilePix>
     </Container>
   );
 };

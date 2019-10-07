@@ -43,7 +43,7 @@ const skills = [
 const Container = styled.div`
     display:flex;
     flex-direction:column;
-    height:100vh;
+    height:100%;
     width: 85%;
     margin-left:15%;
     margin-top:5%;
@@ -52,6 +52,10 @@ const Container = styled.div`
       color:rgb(32, 53, 67);
       margin-bottom: 5vh;
   }
+  @media(max-width:600px){
+  width:100%;
+  margin-left:5%
+  }
   
 `;
 const Skill = styled.div`
@@ -59,6 +63,10 @@ const Skill = styled.div`
   margin: 3% 0%;
   width: 90%;
   justify-content: space-between;
+  @media(max-width:600px){
+    flex-direction:column;
+    margin-right:5%
+  }
 `;
 const Tools = styled.div`
   margin: 2% 1.5%;
@@ -74,10 +82,19 @@ const ToolKit = styled.div`
 const Lower = styled.div`
   display: flex;
   width: 90%;
+  margin:0;
   justify-content:space-between;
+  @media(max-width:600px){
+    margin:0;
+    flex-direction:column;
+    text-align:center;
+   }
 `;
 const FirstPart = styled.div`
-  width:50%
+  width:50%;
+  @media(max-width:600px){
+    width:100%;
+  }
 `
 const SecondPart = styled.div`
   width:40%;
@@ -87,18 +104,25 @@ const Div = styled.div`
 display:flex;
 width:100%;
 justfy-content:space-between;
+flex-wrap:wrap;
 span{
     width:33%;
     padding:4% 0;
+    font-size:1em;
 }
 `;
 const H = styled.h2`
-margin-left:40%
+margin-left:40%;
+@media(max-width:600px){
+ margin:0;
+ text-align:center;
+}
+
 `
 const Skills = () => {
   return (
     <Container>
-      <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
+      <ScrollAnimation animateIn="fadeInUp" >
         <H>WHAT I DO </H>
         <Skill>
           {skills.map(skill => (
@@ -108,30 +132,23 @@ const Skills = () => {
       </ScrollAnimation>
       <Lower>
         <FirstPart>
-          <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+          <ScrollAnimation animateIn="fadeIn">
             <h2>TECHNICAL SKILLS</h2>
             <Div>
             <span>Programming</span>
             <span>Algorithms</span>
             <span>Database Management</span>
-          
-            </Div>
-            <Div>
             <span>Lean Development</span>
             <span>Agile Development</span>
             <span>Test Driven Development</span>
-            </Div>
-            <Div>
             <span>User Research</span>
             <span>Debugging</span>
             <span>Project Management</span>
-           
             </Div>
-        
           </ScrollAnimation>
         </FirstPart>
         <SecondPart>
-        <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+        <ScrollAnimation animateIn="fadeIn">
             <h2>TOOLS</h2>
             <ToolKit>
               <Tools style={{ backgroundImage: `url(${Html})` }} />
