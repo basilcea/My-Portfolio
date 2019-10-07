@@ -1,15 +1,29 @@
-import React from "react";
+import React ,{useState} from "react";
 import styled from 'styled-components'
-import {FaGlobe , FaGithubAlt} from 'react-icons/fa'
-import {Link} from 'react-router-dom';
+import {FaGlobe , FaGithub} from 'react-icons/fa';
+import background from '../../assests/background.png'
 const Container = styled.div`
-width:30%
+width:30%;
+display:flex;
+flex-direction:column;
 height:250px;
-border:2px solid rgb(32, 53, 67);
+background-color:rgb(32, 53, 67);
 box-shadow: 1px 1px 13px -1px rgba(219,215,219,1);
 margin:1% 0%;
 border-radius: 10px 10px 0px 0px;
-img{
+transition: transform 0.8s;
+transform-style: preserve-3d;
+${props => props.transformed && `transform:rotateY(180deg)`};
+`;
+const FrontDiv = styled.div`
+display:flex;
+flex-direction:column;
+  backface-visibility:hidden;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3%);
+  position:absolute;
+  img{
     height:70%;
     width:100%;
     border-radius:5px;
@@ -17,21 +31,108 @@ img{
 }
 div{
     height:30%;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
     width:100%;
-    background-color:rgb(32, 53, 67);
+    background:url(${background});
+    a{
+        color:rgb(32, 53, 67);
+        text-decoration:none;
+    }
+    span{
+        color:rgb(32, 53, 67);
+    }
 }
 `;
+const Button=styled.button`
+    width:30%;
+    height:50%;
+    outline:none;
+    float:right;
+    border-radius:5px;
+    background-color:inherit;
+    font-size:0.8em;
+    border:1px solid rgb(32, 53, 67);
+    color:rgb(32, 53, 67);
+    &:hover{
+        background-color:rgb(32, 53, 67);
+        color:white;
+    }`
+const BackDiv = styled.div`
+  width: 100%;
+  height: 100%;
+  margin:0;
+  transform: rotateY(180deg);
+  padding: 5% 0%;
+  backface-visibility:hidden;
+  position: absolute;
+  p{
+      padding:0 5%;
+      color:white;
+  }
+  a{
+    text-decoration:none;
+  }
+  div{
+    display:flex;
+    justify-content:space-between;
+  }
+`;
+const Highlights = styled.div`
+display:flex;
+flex-direction:column;
+height:42%;
+p{
+    font-size:0.8em;
+    margin:0%;
+    color:white;
+}
+`;
+const Stack = styled.div`
+    display:flex;
+    height:30%;
+    margin-top:3%;
+    width:100%;
+    padding:0 5%;
+    justify-content:space-between;
+    align-items:center;
+    background:url(${background});
+    width:100%;
+    flex-wrap:wrap;
+    span{
+        font-size:.8em;
+        margin-right:3%;
+    }
+`;
 
-const Button = styled.button``
+
 const Project = props => {
+    const [transformStatus, setTransform] = useState(false);
+    const setStyle = () => {
+        setTransform(!transformStatus);
+      };
   return (
-    <Container>
+    <Container transformed={transformStatus}>
+        <FrontDiv>
       <img src={props.data.icon} alt="" />
       <div>
-      <Link to={props.data.web}><FaGlobe/></Link>
-      <Link to={props.data.github}><FaGithubAlt/></Link>
-      <Button>About Project</Button>
+    <span>{props.data.name}</span>
+      <a href={props.data.web}><FaGlobe/></a>
+      <a href={props.data.github}><FaGithub/></a>
+      <Button onClick={() => setStyle()}>About Project </Button>
       </div>
+      </FrontDiv>
+      <BackDiv transformed={transformStatus}>
+   
+    <p>{props.data.description}</p>
+    <Highlights>
+        {props.data.responsibilities.map(responsibility => <p>- {responsibility}.</p>)}
+    </Highlights>
+    <Stack>Built with: {props.data.stack.map(stack => <span> {stack}</span>)}
+    <Button onClick={() => setStyle()}>Go Back</Button></Stack>
+
+      </BackDiv>
     </Container>
   );
 };
