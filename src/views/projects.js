@@ -108,9 +108,9 @@ const ProjectsDiv = styled.div`
     justify-content:space-evenly;
     flex-wrap:wrap;
     width:90%;
-    margin:0 5%;
     @media(max-width:800px){
         flex-direction:column;
+        margin:0 5%;
     }
 `;
 const Projects = ()=> {

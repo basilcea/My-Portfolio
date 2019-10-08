@@ -7,7 +7,7 @@ const Container = styled.div`
   width: 85%;
   margin-left: 15%;
   display: flex;
-  height:100%;
+  height:100vh;
   justify-content: space-between;
   align-items: center;
   div{
@@ -104,7 +104,7 @@ const About = () => {
           exact web page, put the address in the address bar. But i did not know it.
           That was my first experience with computers and that was the moment i
           decided i was going to learn what there was to learn about this
-          intriguing device everyone in the cybercafe was spending  on. Over
+          intriguing device everyone in the cybercafe was spending time on. Over
           the years, technology has evolved and the number of people going to
           cybercafe has drastically reduced in Nigeria but my excitement over
           technology has not.

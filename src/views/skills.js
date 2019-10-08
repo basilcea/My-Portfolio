@@ -147,13 +147,12 @@ const Skills = () => {
             <Div>
             <span>Programming</span>
             <span>Algorithms</span>
+            <span>Database Management</span>
             <span>User Research</span>
             <span>Debugging</span>
-            <span>Database Management</span>
+            <span>Test Driven Development</span>
             <span>Lean Development</span>
             <span>Agile Development</span>
-            <span>Test Driven Development</span>
-            
             <span>Project Management</span>
             </Div>
           </ScrollAnimation>

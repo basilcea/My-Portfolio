@@ -15,6 +15,14 @@ const Container = styled.div`
     margin-top: 7%;
     text-align: center;
     color: rgb(32, 53, 67);
+    @media (max-width: 800px) {
+      margin-top:5%;
+    }
+  }
+  @media (max-width: 800px) {
+    width: 100%;
+    height:100%
+    margin: 0;
   }
 `;
 const Form = styled.form`
@@ -44,6 +52,9 @@ const Form = styled.form`
     width: 60%;
     margin: 0% 20%;
   }
+  @media (max-width: 800px) {
+    margin: 5%;
+  }
 `;
 const Textarea = styled.textarea`
 width: 100%;
@@ -70,6 +81,9 @@ const Features = styled.div`
   display: flex;
   justify-content: space-between;
   width: 90%;
+  @media (max-width: 800px) {
+    margin: 0% 5%;
+  }
 `;
 const Activity = styled.div`
   display: flex;
@@ -85,11 +99,23 @@ const Place = styled.div`
   display: flex;
   width: 100%;
   margin-top: 5%;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 const Div = styled.div`
   width: 50%;
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;
-
+const MapDiv = styled.div`
+width:50%;
+height:100%;
+@media (max-width: 800px) {
+  width: 100%;
+}
+`;
 
 const encode = data => {
   return Object.keys(data)
@@ -176,20 +202,24 @@ class Contact extends React.Component {
               </Form>
             </ScrollAnimation>
           </Div>
+          <MapDiv>
           <ScrollAnimation
             animateIn="fadeInUp"
             animateOut="fadeOut"
-            style={{ width: "50%", height: "100%" }}
+            style={{height: "100%" }}
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15856.497204439343!2d3.3616950272125!3d6.50594572470166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c8c358b3f4b%3A0x5552cfbd43df8434!2sYaba%2C%20Oworonshoki!5e0!3m2!1sen!2sng!4v1570467602009!5m2!1sen!2sng"
-              width="100%"
-              height="95%"
-              frameborder="0"
-              style={{border:'0'}}
-              allowfullscreen=""
+              style={{
+                border: "0",
+                frameBorder: "0",
+                width: "100%",
+                height: "95%",
+                allowFullScreen: ""
+              }}
             />
           </ScrollAnimation>
+          </MapDiv>
         </Place>
       </Container>
     );
