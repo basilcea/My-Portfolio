@@ -24,7 +24,7 @@ const Container = styled.div`
   width: 90%;
   margin-left: 2%;
   height: 100vh;
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     margin-left: 0;
     width: 100%;
@@ -34,7 +34,7 @@ const Hero = styled.div`
   height: 50%;
   width: 45%;
   margin-left: 15%;
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     width:90%;
     margin:0 5%
   }
@@ -48,7 +48,7 @@ const Hello = styled.p`
   text-align: center;
   font-size: 1.2em;
   line-height: 30px;
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     width: 90%;
     margin:0 5%
     line-height: 40px;
@@ -65,14 +65,14 @@ const Description = styled.div`
   font-size: 1.5em;
   font-weight: bold;
   ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
-  @media(max-width:600px){
+  @media(max-width:800px){
     justify-content:center;
     font-size: 1.2em;
   }
 `;
 const Detail = styled.p`
   ${props => (props.mode === "dark" ? `color:white` : `color:black`)};
-  @media(max-width:600px){
+  @media(max-width:800px){
     margin-left:10%;
   }
   &:hover {
@@ -84,7 +84,7 @@ const Detail = styled.p`
     margin-right: 3%;
 
   }
-  @media(max-width:600px){
+  @media(max-width:800px){
     justify-content:center;
   }
   
@@ -95,7 +95,7 @@ const Socials = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 40%;
-  @media(max-width:600px){
+  @media(max-width:800px){
     justify-content:center;
     width:100%;
   }
@@ -106,7 +106,7 @@ const Socials = styled.div`
     justify-content: center;
     text-decoration: none;
     ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
-    @media(max-width:600px){
+    @media(max-width:800px){
      margin-right:5%;
     }
   }
@@ -117,7 +117,7 @@ const ProfilePix = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     order: -1; 
     width: 100%;
     height:45%;
@@ -131,7 +131,7 @@ const OuterRadius = styled.div`
     justify-content:center;
     align-items:center;
     display:flex;
-    @media(max-width:600px){
+    @media(max-width:800px){
       width:65%;
       height:70%;
     }
@@ -143,7 +143,7 @@ const OuterRadius = styled.div`
 const Name = styled.div`
   display: flex;
   align-items: center;
-  @media(max-width:600px){
+  @media(max-width:800px){
     justify-content:center;
   }
   h1 {
@@ -152,7 +152,7 @@ const Name = styled.div`
     font-size: 3em;
     ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
     margin-bottom: 2px;
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       font-size:2em;
       padding-top: 5%;
     }
@@ -160,9 +160,9 @@ const Name = styled.div`
   img {
     width: 3.5em;
     height: 4em;
-    padding-top: 2%;
+    padding-top: 3%;
     padding-right: 0.5%;
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       width:2.5em;
       height:3em;
     }
@@ -183,7 +183,7 @@ const Button = styled.a`
     color: white;
     background-color: rgb(32, 53, 67);
   }
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     font-size: 0.8em;
     display:flex;
     justify-content:center;

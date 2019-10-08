@@ -7,7 +7,7 @@ height:100%;
 box-shadow: -1px 2px 19px -3px rgba(196,194,196,1);
 background-color:white;
 text-align:center;
-@media(max-width:600px){
+@media(max-width:800px){
     width:100%;
     margin-bottom:5%;
 }

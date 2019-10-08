@@ -8,12 +8,17 @@ const Container = styled.div`
 width:30%;
 display:flex;
 flex-direction:column;
-height:250px;
+height:30vh;
 box-shadow: 1px 1px 13px -1px rgba(219,215,219,1);
 margin:1% 0%;
 border-radius: 10px 10px 0px 0px;
 transition: transform 0.8s;
 transform-style: preserve-3d;
+@media(max-width:800px){
+    width:100%;
+    margin-bottom:5%;
+    height:40vh;
+}
 ${props => props.transformed && `transform:rotateY(180deg)`};
 `;
 const FrontDiv = styled.div`
@@ -28,7 +33,7 @@ flex-direction:column;
     background-color:rgb(32, 53, 67);
     width:100%;
     border-radius:5px 5px 0px 0px;
-    border-bottom:none;
+  
 }
 div{
     height:30%;
@@ -37,6 +42,7 @@ div{
     justify-content:space-evenly;
     width:100%;
     background:url(${background});
+    border-bottom:2px solid rgb(32, 53, 67) ;
     a{
         color:rgb(32, 53, 67);
         text-decoration:none;

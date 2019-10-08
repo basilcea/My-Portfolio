@@ -52,7 +52,7 @@ const Container = styled.div`
       color:rgb(32, 53, 67);
       margin-bottom: 5vh;
   }
-  @media(max-width:600px){
+  @media(max-width:800px){
   width:100%;
   margin-left:5%
   }
@@ -63,13 +63,13 @@ const Skill = styled.div`
   margin: 3% 0%;
   width: 90%;
   justify-content: space-between;
-  @media(max-width:600px){
+  @media(max-width:800px){
     flex-direction:column;
     margin-right:5%
   }
 `;
 const Tools = styled.div`
-  margin: 2% 1.5%;
+  margin: 2% 0%;
   background-repeat: no-repeat;
   background-size: contain;
   height: 6vh;
@@ -78,13 +78,16 @@ const Tools = styled.div`
 const ToolKit = styled.div`
   display: flex;
   width:100%;
+  @media(max-width:800px){
+  margin-left:5%;
+  }
 `;
 const Lower = styled.div`
   display: flex;
   width: 90%;
   margin:0;
   justify-content:space-between;
-  @media(max-width:600px){
+  @media(max-width:800px){
     margin:0;
     flex-direction:column;
     text-align:center;
@@ -92,13 +95,17 @@ const Lower = styled.div`
 `;
 const FirstPart = styled.div`
   width:50%;
-  @media(max-width:600px){
+  @media(max-width:800px){
     width:100%;
   }
 `
 const SecondPart = styled.div`
   width:40%;
   margin-left:10%;
+  @media(max-width:800px){
+    width:90%;
+    margin:0 5%;
+  }
 `
 const Div = styled.div`
 display:flex;
@@ -109,11 +116,14 @@ span{
     width:33%;
     padding:4% 0;
     font-size:1em;
+    @media(max-width:800px){
+      font-size:0.85em
+     }
 }
 `;
 const H = styled.h2`
 margin-left:40%;
-@media(max-width:600px){
+@media(max-width:800px){
  margin:0;
  text-align:center;
 }
@@ -137,12 +147,13 @@ const Skills = () => {
             <Div>
             <span>Programming</span>
             <span>Algorithms</span>
+            <span>User Research</span>
+            <span>Debugging</span>
             <span>Database Management</span>
             <span>Lean Development</span>
             <span>Agile Development</span>
             <span>Test Driven Development</span>
-            <span>User Research</span>
-            <span>Debugging</span>
+            
             <span>Project Management</span>
             </Div>
           </ScrollAnimation>

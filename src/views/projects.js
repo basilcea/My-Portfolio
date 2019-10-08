@@ -79,7 +79,7 @@ const data = [{
 {id:6,
     icon:kidsfly,
     name:'Kids Fly',
-    description:'An app that enables flying with kids a hassle free flight.',
+    description:'An app that enables parents flying with kids, a hassle free flight.',
     stack:['Vaniila Js', 'HTML' , 'CSS Modules', 'SQL' , 'Express', 'Postgres'],
     responsibilities:[
         'Built responsive front-end using vanilla javascript and css modules',
@@ -93,10 +93,14 @@ const Container = styled.div`
 width:85%;
 margin-left:15%;
 margin-top:4%;
-height: 100vh;
+height: 100%;
 h2{
     width:85%;
     text-align:center;
+}
+@media(max-width:800px){
+    width:100%;
+    margin:0;
 }
 `
 const ProjectsDiv = styled.div`
@@ -104,6 +108,10 @@ const ProjectsDiv = styled.div`
     justify-content:space-evenly;
     flex-wrap:wrap;
     width:90%;
+    margin:0 5%;
+    @media(max-width:800px){
+        flex-direction:column;
+    }
 `;
 const Projects = ()=> {
     return (

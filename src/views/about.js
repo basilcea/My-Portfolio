@@ -13,7 +13,7 @@ const Container = styled.div`
   div{
     width:90%;
   }
-  @media(max-width:600px){
+  @media(max-width:800px){
     flex-direction:column;
     margin:0;
     width:100%;
@@ -24,7 +24,7 @@ const Details = styled.div`
   margin-right: 10%;
   margin-top:5%;
   text-align: justify;
-  @media(max-width:600px){
+  @media(max-width:800px){
     width:90%;
     margin:0% 5%;
   
@@ -32,7 +32,7 @@ const Details = styled.div`
   h2{
     color:rgb(32, 53, 67);
     font-size:1.5em;
-    @media(max-width:600px){
+    @media(max-width:800px){
       text-align:center;
       margin:0% 5%;
     
@@ -44,14 +44,14 @@ const Details = styled.div`
     display: flex;
     flex-wrap:wrap;
     justify-content: space-between;
-    @media(max-width:600px){
+    @media(max-width:800px){
       line-height:18px;
       font-size:0.8em;
       padding: 0 5%;
     }
   }
   h3{
-    @media(max-width:600px){
+    @media(max-width:800px){
       margin: 0 5%;
     }
   }
@@ -61,7 +61,7 @@ const Details = styled.div`
     width: 18%;
     margin-bottom:5%;
     text-align: center;
-    @media(max-width:600px){
+    @media(max-width:800px){
       line-height:18px;
       font-size:0.8em;
     }
@@ -74,7 +74,7 @@ height:80vh;
 background-size:100%;
 background-position:center;
 background-repeat:no-repeat;
-@media(max-width:600px){
+@media(max-width:800px){
   height:40vh;
   width:100%;
   margin-bottom:1%;
@@ -82,7 +82,7 @@ background-repeat:no-repeat;
 `;
 const Initial = styled.div`
   font-weight: bold;
-  @media(max-width:600px){
+  @media(max-width:800px){
     padding-top:5%;
     text-align:center;
   }
