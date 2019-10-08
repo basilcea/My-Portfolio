@@ -19,6 +19,9 @@ transform-style: preserve-3d;
     margin-bottom:5%;
     height:40vh;
 }
+@media(max-height:400px){
+    width:45%;
+}
 ${props => props.transformed && `transform:rotateY(180deg)`};
 `;
 const FrontDiv = styled.div`
@@ -50,6 +53,9 @@ div{
     span{
         color:rgb(32, 53, 67);
     }
+    @media(max-height:400px){
+        justify-content: space-between;
+    }
 }
 `;
 const Button=styled.button`
@@ -62,6 +68,9 @@ const Button=styled.button`
     font-size:0.8em;
     border:1px solid rgb(32, 53, 67);
     color:rgb(32, 53, 67);
+    @media(max-height:400px){
+       height:80%;
+    }
     &:hover{
         background-color:rgb(32, 53, 67);
         color:white;
@@ -114,6 +123,15 @@ const Stack = styled.div`
         margin-right:3%;
     }
 `;
+const Details = styled.div`
+@media(max-height:400px){
+    padding:0% 5%;
+    a{
+        margin-right:5%;
+    }
+ }
+
+`
 
 
 const Project = props => {
@@ -127,12 +145,12 @@ const Project = props => {
             <ScrollAnimation animateIn="fadeIn" style={{height:'70%'}}>
       <img src={props.data.icon} alt=""/>
       </ScrollAnimation>
-      <div>
+      <Details>
     <span>{props.data.name}</span>
       <a href={props.data.web}><FaGlobe/></a>
       <a href={props.data.github}><FaGithub/></a>
       <Button onClick={() => setStyle()}>About Project </Button>
-      </div>
+      </Details>
       </FrontDiv>
       <BackDiv transformed={transformStatus}>
    

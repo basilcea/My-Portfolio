@@ -112,6 +112,12 @@ const ProjectsDiv = styled.div`
         flex-direction:column;
         margin:0 5%;
     }
+    @media(max-height:400px){
+        width:90%;
+        flex-wrap:wrap;
+        flex-direction:row;
+        margin:0 5%;
+    }
 `;
 const Projects = ()=> {
     return (

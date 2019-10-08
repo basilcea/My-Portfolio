@@ -24,7 +24,7 @@ const Container = styled.div`
   width: 90%;
   margin-left: 2%;
   height: 100vh;
-  @media (max-width: 800px) {
+  @media (max-width: 650px) {
     flex-direction: column;
     margin-left: 0;
     width: 100%;
@@ -34,9 +34,13 @@ const Hero = styled.div`
   height: 50%;
   width: 45%;
   margin-left: 15%;
-  @media (max-width: 800px) {
+  @media (max-width: 650px) {
     width:90%;
     margin:0 5%
+  }
+  @media (max-width: 900px) {
+    width:45%;
+    height:80vh;
   }
 `;
 const Hello = styled.p`
@@ -48,7 +52,7 @@ const Hello = styled.p`
   text-align: center;
   font-size: 1.2em;
   line-height: 30px;
-  @media (max-width: 800px) {
+  @media (max-width: 650px) {
     width: 90%;
     margin:0 5%
     line-height: 40px;
@@ -65,14 +69,18 @@ const Description = styled.div`
   font-size: 1.5em;
   font-weight: bold;
   ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
-  @media(max-width:800px){
+  @media(max-width:650px){
     justify-content:center;
     font-size: 1.2em;
+  }
+  @media(max-width:900px){
+    justify-content:flex-start;
+    font-size: 1em;
   }
 `;
 const Detail = styled.p`
   ${props => (props.mode === "dark" ? `color:white` : `color:black`)};
-  @media(max-width:800px){
+  @media(max-width:650px){
     margin-left:10%;
   }
   &:hover {
@@ -84,7 +92,7 @@ const Detail = styled.p`
     margin-right: 3%;
 
   }
-  @media(max-width:800px){
+  @media(max-width:650px){
     justify-content:center;
   }
   
@@ -95,9 +103,14 @@ const Socials = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 40%;
-  @media(max-width:800px){
+  @media(max-width:650px){
     justify-content:center;
     width:100%;
+  }
+  @media(max-width:900px){
+    justify-content: space-between;
+    width:80%;
+    margin-bottom:10%;
   }
   a {
     display: flex;
@@ -106,7 +119,7 @@ const Socials = styled.div`
     justify-content: center;
     text-decoration: none;
     ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
-    @media(max-width:800px){
+    @media(max-width:650px){
      margin-right:5%;
     }
   }
@@ -117,7 +130,7 @@ const ProfilePix = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  @media (max-width: 800px) {
+  @media (max-width: 650px) {
     order: -1; 
     width: 100%;
     height:45%;
@@ -131,7 +144,7 @@ const OuterRadius = styled.div`
     justify-content:center;
     align-items:center;
     display:flex;
-    @media(max-width:800px){
+    @media(max-width:650px){
       width:65%;
       height:70%;
     }
@@ -143,7 +156,7 @@ const OuterRadius = styled.div`
 const Name = styled.div`
   display: flex;
   align-items: center;
-  @media(max-width:800px){
+  @media(max-width:650px){
     justify-content:center;
   }
   h1 {
@@ -152,8 +165,12 @@ const Name = styled.div`
     font-size: 3em;
     ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
     margin-bottom: 2px;
-    @media (max-width: 800px) {
+    @media (max-width: 650px) {
       font-size:2em;
+      padding-top: 5%;
+    }
+    @media (max-width: 900px) {
+      font-size:1.2em;
       padding-top: 5%;
     }
   }
@@ -162,9 +179,13 @@ const Name = styled.div`
     height: 4em;
     padding-top: 3%;
     padding-right: 0.5%;
-    @media (max-width: 800px) {
+    @media (max-width: 650px) {
       width:2.5em;
       height:3em;
+    }
+    @media (max-width: 900px) {
+      width:2em;
+      height:2.5em;
     }
   }
 `;
@@ -183,7 +204,7 @@ const Button = styled.a`
     color: white;
     background-color: rgb(32, 53, 67);
   }
-  @media (max-width: 800px) {
+  @media (max-width: 650px) {
     font-size: 0.8em;
     display:flex;
     justify-content:center;

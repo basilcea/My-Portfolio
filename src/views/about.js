@@ -13,7 +13,7 @@ const Container = styled.div`
   div{
     width:90%;
   }
-  @media(max-width:800px){
+  @media(max-width:1024px){
     flex-direction:column;
     margin:0;
     width:100%;
@@ -24,7 +24,7 @@ const Details = styled.div`
   margin-right: 10%;
   margin-top:5%;
   text-align: justify;
-  @media(max-width:800px){
+  @media(max-width:1024px){
     width:90%;
     margin:0% 5%;
   
@@ -37,6 +37,11 @@ const Details = styled.div`
       margin:0% 5%;
     
     }
+    @media(max-height:400px){
+      text-align:left;
+      margin:0%;
+    
+    }
   }
   p {
     line-height: 22px;
@@ -44,7 +49,7 @@ const Details = styled.div`
     display: flex;
     flex-wrap:wrap;
     justify-content: space-between;
-    @media(max-width:800px){
+    @media(max-width:600px){
       line-height:18px;
       font-size:0.8em;
       padding: 0 5%;
@@ -74,10 +79,17 @@ height:80vh;
 background-size:100%;
 background-position:center;
 background-repeat:no-repeat;
-@media(max-width:800px){
+@media(max-width:600px){
   height:40vh;
   width:100%;
+  background-size:100%;
   margin-bottom:1%;
+}
+@media(max-height:400px){
+  height:70vh;
+  margin-left:5%;
+  background-size:80%;
+  width:100%;
 }
 `;
 const Initial = styled.div`
@@ -85,6 +97,10 @@ const Initial = styled.div`
   @media(max-width:800px){
     padding-top:5%;
     text-align:center;
+  }
+  @media(max-height:400px){
+    padding-top:5%;
+    text-align:left;
   }
 `;
 const About = () => {
