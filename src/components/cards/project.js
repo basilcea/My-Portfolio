@@ -19,8 +19,12 @@ transform-style: preserve-3d;
     margin-bottom:5%;
     height:40vh;
 }
+@media(max-width:1024){
+    width:33%;
+}
 @media(max-height:400px){
     width:45%;
+    height:50vh;
 }
 ${props => props.transformed && `transform:rotateY(180deg)`};
 `;

@@ -15,8 +15,8 @@ const Container = styled.div`
   }
   @media(max-width:1024px){
     flex-direction:column;
-    margin:0;
-    width:100%;
+    margin:0 5%;
+    width:90%;
   }
 `;
 const Details = styled.div`
@@ -25,8 +25,14 @@ const Details = styled.div`
   margin-top:5%;
   text-align: justify;
   @media(max-width:1024px){
-    width:90%;
-    margin:0% 5%;
+    width:100%;
+    margin-left:15%;
+  
+  }
+  @media(max-width:600px){
+    margin-right:0%;
+    width:100%;
+    margin-left:0%;
   
   }
   h2{
@@ -39,7 +45,7 @@ const Details = styled.div`
     }
     @media(max-height:400px){
       text-align:left;
-      margin:0%;
+      margin-left:10%;
     
     }
   }
@@ -52,11 +58,15 @@ const Details = styled.div`
     @media(max-width:600px){
       line-height:18px;
       font-size:0.8em;
-      padding: 0 5%;
+      padding: 0%;
     }
+    @media(max-width:1024px){
+      font-size:1em;
+    }
+
   }
   h3{
-    @media(max-width:800px){
+    @media(max-width:600px){
       margin: 0 5%;
     }
   }
@@ -66,9 +76,9 @@ const Details = styled.div`
     width: 18%;
     margin-bottom:5%;
     text-align: center;
-    @media(max-width:800px){
+    @media(max-width:600px){
       line-height:18px;
-      font-size:0.8em;
+      font-size:0.6em;
     }
   }
 `;
@@ -86,10 +96,15 @@ background-repeat:no-repeat;
   margin-bottom:1%;
 }
 @media(max-height:400px){
-  height:70vh;
+  height:50vh;
   margin-left:5%;
-  background-size:80%;
+  background-size:60%;
   width:100%;
+}
+@media(min-width:601px and max-width:1024px){
+  height:40vh;
+  margin-left:10%;
+  background-size:60%;
 }
 `;
 const Initial = styled.div`

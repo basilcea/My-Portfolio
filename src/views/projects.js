@@ -98,9 +98,9 @@ h2{
     width:85%;
     text-align:center;
 }
-@media(max-width:800px){
-    width:100%;
-    margin:0;
+@media(max-width:1024px){
+    width:90%;
+    margin:0 5%;
 }
 `
 const ProjectsDiv = styled.div`
