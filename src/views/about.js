@@ -12,6 +12,12 @@ const Container = styled.div`
   align-items: center;
   div{
     width:90%;
+    @media(max-width:600px){
+      margin-right:0%;
+      width:100%;
+      margin-left:0%;
+    
+    }
   }
   @media(max-width:1024px){
     flex-direction:column;
@@ -27,12 +33,6 @@ const Details = styled.div`
   @media(max-width:1024px){
     width:100%;
     margin-left:15%;
-  
-  }
-  @media(max-width:600px){
-    margin-right:0%;
-    width:100%;
-    margin-left:0%;
   
   }
   h2{
@@ -57,7 +57,7 @@ const Details = styled.div`
     justify-content: space-between;
     @media(max-width:600px){
       line-height:18px;
-      font-size:0.8em;
+      font-size:0.5em;
       padding: 0%;
     }
     @media(max-width:1024px){
@@ -66,8 +66,9 @@ const Details = styled.div`
 
   }
   h3{
+    color:rgb(32, 53, 67);
     @media(max-width:600px){
-      margin: 0 5%;
+      text-align:center;
     }
   }
   span {

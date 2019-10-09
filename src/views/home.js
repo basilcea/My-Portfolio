@@ -24,23 +24,26 @@ const Container = styled.div`
   width: 90%;
   margin-left: 2%;
   height: 100vh;
-  @media (max-width: 650px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     margin-left: 0;
     width: 100%;
+  }
+  @media(max-height:450px){
+    flex-direction:row
   }
 `;
 const Hero = styled.div`
   height: 50%;
   width: 45%;
   margin-left: 15%;
-  @media (max-width: 650px) {
+  @media (max-width: 800px) {
     width:90%;
     margin:0 5%
   }
-  @media (max-width: 900px) {
-    width:45%;
-    height:80vh;
+  @media(max-height:450px){
+    width:50%;
+    height:60%;
   }
 `;
 const Hello = styled.p`
@@ -52,7 +55,7 @@ const Hello = styled.p`
   text-align: center;
   font-size: 1.2em;
   line-height: 30px;
-  @media (max-width: 650px) {
+  @media (max-width: 800px) {
     width: 90%;
     margin:0 5%
     line-height: 40px;
@@ -69,19 +72,31 @@ const Description = styled.div`
   font-size: 1.5em;
   font-weight: bold;
   ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
-  @media(max-width:650px){
+  @media(max-width:800px){
     justify-content:center;
+  }
+  @media(max-width:650px){
     font-size: 1.2em;
   }
-  @media(max-width:900px){
+  @media(max-height:450px){
+    font-size:1.2em;
     justify-content:flex-start;
-    font-size: 1em;
+    margin-left:5%;
   }
 `;
 const Detail = styled.p`
   ${props => (props.mode === "dark" ? `color:white` : `color:black`)};
+  font-size:1.5em;
+  @media(max-width:800px){
+   text-align:center;
+  }
   @media(max-width:650px){
-    margin-left:10%;
+    font-size:1em;
+   }
+   @media(max-height:450px){
+    font-size:1em;
+    text-align:left;
+    margin-left:5%;
   }
   &:hover {
     span {
@@ -92,9 +107,6 @@ const Detail = styled.p`
     margin-right: 3%;
 
   }
-  @media(max-width:650px){
-    justify-content:center;
-  }
   
 `;
 const Socials = styled.div`
@@ -103,24 +115,24 @@ const Socials = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 40%;
-  @media(max-width:650px){
+  @media(max-width:800px){
     justify-content:center;
     width:100%;
   }
-  @media(max-width:900px){
+  @media(max-height:450px){
     justify-content: space-between;
-    width:80%;
-    margin-bottom:10%;
+    width: 60%;
+    margin-left:3%;
   }
   a {
     display: flex;
     align-items: center;
     font-size: 1.5em;
-    justify-content: center;
+    justify-content: space-between;
     text-decoration: none;
     ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
-    @media(max-width:650px){
-     margin-right:5%;
+    @media(max-width:800px){
+      margin: 0 2%;
     }
   }
 `;
@@ -130,10 +142,15 @@ const ProfilePix = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  @media (max-width: 650px) {
+  @media (max-width: 800px) {
     order: -1; 
     width: 100%;
     height:45%;
+  }
+  @media(max-height:450px){
+  order:0;
+  width: 55%;
+  height:100%;
   }
 `;
 const OuterRadius = styled.div`
@@ -156,8 +173,12 @@ const OuterRadius = styled.div`
 const Name = styled.div`
   display: flex;
   align-items: center;
-  @media(max-width:650px){
+  @media(max-width:800px){
     justify-content:center;
+  }
+  @media(max-height:450px){
+   justify-content:flex-start;
+   margin-left:5%;
   }
   h1 {
     margin-top: 0%;
@@ -169,9 +190,8 @@ const Name = styled.div`
       font-size:2em;
       padding-top: 5%;
     }
-    @media (max-width: 900px) {
-      font-size:1.2em;
-      padding-top: 5%;
+    @media(max-height:450px){
+      font-size:1.5em
     }
   }
   img {
@@ -183,10 +203,9 @@ const Name = styled.div`
       width:2.5em;
       height:3em;
     }
-    @media (max-width: 900px) {
+    @media(max-height:450px){
       width:2em;
       height:2.5em;
-    }
   }
 `;
 const Button = styled.a`
@@ -204,12 +223,18 @@ const Button = styled.a`
     color: white;
     background-color: rgb(32, 53, 67);
   }
-  @media (max-width: 650px) {
+  @media (max-width: 800px) {
     font-size: 0.8em;
     display:flex;
     justify-content:center;
-    height:20px;
     height:3em;
+    width:50%;
+    margin:0 25%;
+  }
+  @media (max-height:450px){
+    justify-content:flex-start;
+    margin:5%;
+
   }
 `;
 dotenv.config();
