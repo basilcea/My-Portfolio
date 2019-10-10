@@ -14,12 +14,11 @@ const data = [{
     id:1,
     name:'Asklite',
     icon:asklite,
-    description:'A Lite version of the popular question and answer platform for  stackoverflow.',
-    stack:['Vanilla Js', 'HTML' , 'CSS Modules', 'SQL' , 'Express', 'Postgres'],
+    description:'A question and answer web forum for developers',
+    stack:['POSTGRES', 'EXPRESS' , 'CSS MODULES', 'NODE'],
     responsibilities:[
-        'Built responsive front-end using vanilla javascript and css modules',
-        'Built Api consumed by front-end using Node JS, Express , and SQL',
-        'Ensured testing ,test coverage, maintainability and api documentation'
+        'Built responsive front-end using vanilla Javascript and CSS Modules',
+        'Built API consumed by front-end using NODE JS, EXPRESS , and SQL',
     ],
     github:'',
     web:'',
@@ -28,9 +27,8 @@ const data = [{
     name:'Where To Code',
     icon:wheretocode,
     description:'A web app to help remote developers find places to code. ',
-    stack:['React', 'Styled-Components' , 'Redux', 'Node JS' , 'Express', 'Postgres'],
+    stack:['POSTGRES','EXPRESS' , 'REACT', 'NODE'],
     responsibilities:[
-        'Created front-end features including google ratings,UI-Design',
         'Created authentication, validation and controllers in backend API',
         'Ensured jest front and backend testing, continous integration and code coverage' 
     ],
@@ -41,11 +39,10 @@ const data = [{
     icon:lifted,
     name:'Lifted',
     description:'A weight lifting journal for users to track their weight lifting progress',
-    stack:['React', 'Redux' , 'SQlite', 'Node' , 'Express', 'Jest'],
+    stack:['REACT', 'REDUX' , 'EXPRESS', 'NODE'],
     responsibilities:[
         'Built responsive front-end for web app  using React components',
         'Ensured state management using Redux and Private Routing using react-router',
-        "Using routing for dynamic routing of web app"
     ],
     github:'',
     web:'https://lifted.netlify.com',
@@ -54,11 +51,10 @@ const data = [{
     icon:rr,
     name:'Reading Recommender',
     description:'A web app that recommends books based on user preferences',
-    stack:['Vaniila Js', 'HTML' , 'LESS', 'CSS'],
+    stack:['JAVASCRIPT', 'HTML' , 'LESS', 'CSS'],
     responsibilities:[
         'Created responsive marketing page for web app',
         'Created About us page for details about the app and team',
-        'Ensured testing ,test coverage, maintainability and api documentation'
     ],
     github:'',
     web:'https://ceareads.netlify.com',
@@ -66,12 +62,11 @@ const data = [{
 {id:5,
     icon:portfolio,
     name:'Portfolio Pages',
-    description:'A portfolio page built using gatsby generator ',
-    stack:['HTML', 'CSS Modules', 'React' , 'Context', 'Gatsby'],
+    description:'A virtual assistant portfolio page built using Gatsby markup generators',
+    stack:['REACT','CSS MODULES', 'GATSBY' , 'CONTEXT'],
     responsibilities:[
-        'Built responsive front-end using vanilla javascript and css modules',
-        'Built Api consumed by front-end using Node JS, Express , and SQL',
-        'Implement Scroll to anchors in React'
+        'Built responsive front-end using Gatsby',
+        'Used CSS Modules for styling'
     ],
     github:'',
     web:'https://preciouso.netlify.com',
@@ -80,11 +75,9 @@ const data = [{
     icon:kidsfly,
     name:'Kids Fly',
     description:'An app that enables parents flying with kids, a hassle free flight.',
-    stack:['Vaniila Js', 'HTML' , 'CSS Modules', 'SQL' , 'Express', 'Postgres'],
+    stack:['REACT' , 'POSTGRES', 'NODE' , 'REDUX'],
     responsibilities:[
-        'Built responsive front-end using vanilla javascript and css modules',
-        'Built Api consumed by front-end using Node JS, Express , and SQL',
-        'Ensured testing ,test coverage, maintainability and api documentation'
+        'Built API consumed by front-end using Node JS, Express , and POSTGRES',
     ],
     github:'',
     web:'https://kidsfly.netlify.com',
@@ -97,10 +90,15 @@ height: 100%;
 h2{
     width:85%;
     text-align:center;
+    color:rgb(32, 53, 67);
 }
 @media(max-width:1024px){
     width:90%;
     margin:0 5%;
+    h2{
+        margin-top:10%;
+        margin-left:5%;
+    }
 }
 `
 const ProjectsDiv = styled.div`
@@ -108,6 +106,9 @@ const ProjectsDiv = styled.div`
     justify-content:space-evenly;
     flex-wrap:wrap;
     width:90%;
+    @media(max-width:1024px){
+        margin-left:8%;
+    }
     @media(max-width:800px){
         flex-direction:column;
         margin:0 5%;

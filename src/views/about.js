@@ -118,7 +118,7 @@ const About = () => {
         <Side></Side>
       </ScrollAnimation>
       <Details>
-        <ScrollAnimation animateIn="fadeInUp" style={{ width: "100%" }}>
+        <ScrollAnimation animateIn="fadeIn" style={{ width: "100%" }}>
           <h2>About Me</h2>
 
           <Initial>Firstly, I love coding!</Initial>
@@ -142,9 +142,9 @@ const About = () => {
           </p>
           <p>
             My ultimate desire is to improve human lives and raise human
-            potential through software development and to contribute my quarter
-            to making our cities smarter and our lives less stressful.When I am
-            not coding, I am volunteering, listening to music, or playing chess.
+            potential through software development and to do my part in making
+            our cities smarter and our lives less stressful. When I am not
+            coding, I am volunteering, listening to music, or playing chess.
           </p>
           <h3>My Core </h3>
           <p>

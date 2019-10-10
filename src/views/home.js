@@ -213,7 +213,7 @@ const Home = () => {
   return (
     <Container>
       <Hero>
-        <ScrollAnimation animateIn="fadeInUp" style={{ width: "100%" }}>
+        <ScrollAnimation animateIn="fadeIn" style={{ width: "100%" }}>
           <Hello>- - Hello I'm - - </Hello>
           <Name>
             <img src={icon} alt="O" />

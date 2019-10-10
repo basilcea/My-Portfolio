@@ -73,7 +73,7 @@ const Button=styled.button`
     border:1px solid rgb(32, 53, 67);
     color:rgb(32, 53, 67);
     @media(max-height:400px){
-       height:80%;
+       height:60%;
     }
     &:hover{
         background-color:rgb(32, 53, 67);
@@ -96,20 +96,20 @@ const BackDiv = styled.div`
   a{
     text-decoration:none;
   }
-  div{
-    display:flex;
-    justify-content:space-between;
-  }
 `;
 const Highlights = styled.div`
 display:flex;
 flex-direction:column;
-height:42%;
+font-size:0.8em;
 p{
-    font-size:0.8em;
     margin:0%;
     color:white;
+    @media(max-height:400px){
+        padding-bottom:1px;
 }
+}
+
+
 `;
 const Stack = styled.div`
     display:flex;
@@ -136,6 +136,19 @@ const Details = styled.div`
  }
 
 `
+const Description = styled.div`
+height:70%;
+display:flex;
+flex-direction:column;
+font-size:1em;
+@media(max-width: 600px){
+    font-size:0.8em;
+}
+@media(max-height: 400px){
+    height:70%;
+    font-size:0.9em;
+}
+`;
 
 
 const Project = props => {
@@ -158,10 +171,11 @@ const Project = props => {
       </FrontDiv>
       <BackDiv transformed={transformStatus}>
    
-    <p>{props.data.description}</p>
-    <Highlights>
-        {props.data.responsibilities.map(responsibility => <p key={props.data.responsibilities.indexOf(responsibility)}>- {responsibility}.</p>)}
-    </Highlights>
+        <Description><p>{props.data.description}</p>
+        <Highlights>
+        {props.data.responsibilities.map(responsibility => <p key={props.data.responsibilities.indexOf(responsibility)}> *  {responsibility}.</p>)}
+        </Highlights>
+        </Description>
     <Stack>Built with: {props.data.stack.map(stack => <span key={props.data.stack.indexOf(stack)}> {stack}</span>)}
     <Button onClick={() => setStyle()}>Go Back</Button></Stack>
 
