@@ -24,7 +24,7 @@ const Container = styled.div`
   width: 90%;
   margin-left: 2%;
   height: 100vh;
-  @media (max-width: 800px) {
+  @media (max-width: 750px) {
     flex-direction: column;
     margin-left: 0;
     width: 100%;
@@ -37,7 +37,7 @@ const Hero = styled.div`
   height: 50%;
   width: 45%;
   margin-left: 15%;
-  @media (max-width: 800px) {
+  @media (max-width: 750px) {
     width:90%;
     margin:0 5%
   }
@@ -55,7 +55,7 @@ const Hello = styled.p`
   text-align: center;
   font-size: 1.2em;
   line-height: 30px;
-  @media (max-width: 800px) {
+  @media (max-width: 750px) {
     width: 90%;
     margin:0 5%
     line-height: 40px;
@@ -72,7 +72,7 @@ const Description = styled.div`
   font-size: 1.5em;
   font-weight: bold;
   ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
-  @media(max-width:800px){
+  @media(max-width:750px){
     justify-content:center;
   }
   @media(max-width:650px){
@@ -86,8 +86,8 @@ const Description = styled.div`
 `;
 const Detail = styled.p`
   ${props => (props.mode === "dark" ? `color:white` : `color:black`)};
-  font-size:1.5em;
-  @media(max-width:800px){
+  font-size:1.2em;
+  @media(max-width:750px){
    text-align:center;
   }
   @media(max-width:650px){
@@ -115,7 +115,7 @@ const Socials = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 40%;
-  @media(max-width:800px){
+  @media(max-width:750px){
     justify-content:center;
     width:100%;
   }
@@ -131,7 +131,7 @@ const Socials = styled.div`
     justify-content: space-between;
     text-decoration: none;
     ${props => (props.mode === "dark" ? `color:white` : `color:black `)};
-    @media(max-width:800px){
+    @media(max-width:750px){
       margin: 0 2%;
     }
   }
@@ -142,7 +142,7 @@ const ProfilePix = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  @media (max-width: 800px) {
+  @media (max-width: 750px) {
     order: -1; 
     width: 100%;
     height:45%;
@@ -173,7 +173,7 @@ const OuterRadius = styled.div`
 const Name = styled.div`
   display: flex;
   align-items: center;
-  @media(max-width:800px){
+  @media(max-width:750px){
     justify-content:center;
   }
   @media(max-height:450px){
@@ -206,35 +206,6 @@ const Name = styled.div`
     @media(max-height:450px){
       width:2em;
       height:2.5em;
-  }
-`;
-const Button = styled.a`
-  margin-top: 5%;
-  background-color: inherit;
-  border: 2px solid rgb(32, 53, 67);
-  font-size: 1em;
-  border-radius: 5px;
-  height: 40px;
-  padding: 10px 5px;
-  color: rgb(32, 53, 67);
-  text-decoration: none;
-  outline: none;
-  &:hover {
-    color: white;
-    background-color: rgb(32, 53, 67);
-  }
-  @media (max-width: 800px) {
-    font-size: 0.8em;
-    display:flex;
-    justify-content:center;
-    height:3em;
-    width:50%;
-    margin:0 25%;
-  }
-  @media (max-height:450px){
-    justify-content:flex-start;
-    margin:5%;
-
   }
 `;
 dotenv.config();
@@ -290,10 +261,6 @@ const Home = () => {
               <FaMedium />
             </a>
           </Socials>
-
-          <Button href={pdf} download>
-            Download Resume{" "}
-          </Button>
         </ScrollAnimation>
       </Hero>
 
