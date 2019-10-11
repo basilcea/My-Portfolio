@@ -3,8 +3,8 @@ import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 import icon from "../assests/icon.png";
 import "../animate.css";
-import pdf from "../assests/Ogbonna Basil C.pdf";
-import axios from "axios";
+// // import pdf from "../assests/Ogbonna Basil C.pdf";
+// import axios from "axios";
 import Typed from "react-typed";
 import dotenv from "dotenv";
 import {
@@ -23,7 +23,7 @@ const Container = styled.div`
   align-items: center;
   width: 90%;
   margin-left: 2%;
-  height: 100vh;
+  height: 96vh;
   @media (max-width: 750px) {
     flex-direction: column;
     margin-left: 0;
@@ -224,6 +224,7 @@ const Home = () => {
               strings={[
                 "A Frontend Engineer",
                 "A Backend Engineer",
+                "A Fullstack Engineer",
                 "A Software Engineer"
               ]}
               typespeed={100}

@@ -43,10 +43,21 @@ const skills = [
 const Container = styled.div`
     display:flex;
     flex-direction:column;
-    height:100%;
+    height:87.2vh;
     width: 85%;
     margin-left:15%;
     margin-top:5%;
+    @media (max-width:1200px) {
+      height:89vh;
+    }
+    @media (max-height:600px) {
+      height:100%;
+    }
+    
+    @media (max-width: 600px) {
+      height:100%;
+    }
+    
   h2{
       font-size:1.5em;
       color:rgb(32, 53, 67);
@@ -54,6 +65,7 @@ const Container = styled.div`
   }
   @media(max-width:800px){
   width:100%;
+  height:100%;
   margin-left:5%
   }
   

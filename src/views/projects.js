@@ -86,7 +86,7 @@ const Container = styled.div`
 width:85%;
 margin-left:15%;
 margin-top:4%;
-height: 100%;
+height: 89vh;
 h2{
     width:85%;
     text-align:center;
@@ -100,20 +100,29 @@ h2{
         margin-left:5%;
     }
 }
+@media(max-width:1023px){
+    height:100%;
+}
+@media(max-width:1200px){
+    height:92vh;
+}
+
 `
 const ProjectsDiv = styled.div`
     display:flex;
     justify-content:space-evenly;
     flex-wrap:wrap;
     width:90%;
+    height:100%;
     @media(max-width:1024px){
         margin-left:8%;
+     
     }
     @media(max-width:800px){
         flex-direction:column;
         margin:0 5%;
     }
-    @media(max-height:400px){
+    @media(max-height:450px){
         width:90%;
         flex-wrap:wrap;
         flex-direction:row;

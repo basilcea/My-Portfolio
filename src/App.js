@@ -1,4 +1,4 @@
-import React ,{useState}from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Home from './views/home';
 import About from './views/about'
@@ -6,6 +6,7 @@ import Skills from './views/skills'
 import Projects from './views/projects'
 import Navbar from './components/navbar';
 import Contact from './views/contact';
+import Footer from './views/footer'
 import './App.css'
 import {Route} from 'react-router-dom';
 const AppContainer = styled.div`
@@ -28,6 +29,7 @@ const App = () =>{
         <Route path ='/skills' component={Skills} />
         <Route path ='/contact' component={Contact} />
         <Route path='/projects' component={Projects} />
+        <Footer />
       </AppContainer>
     );
   }
