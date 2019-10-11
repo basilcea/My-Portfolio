@@ -125,6 +125,9 @@ const Div = styled.div`
     width: 100%;
     height:90vh;
   }
+  @media (max-height: 450px) {
+    height:100vh;
+  }
 `;
 const MapDiv = styled.div`
 width:50%;
