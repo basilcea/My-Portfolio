@@ -35,6 +35,10 @@ const Form = styled.form`
   margin: 5% 0%;
   padding: 2% 5%;
   justify-content: space-between;
+  @media (max-width: 800px) {
+    margin: 10% 5%;
+    height:60vh;  }
+  
   input {
     background: none;
     font-size: 1em;
@@ -47,13 +51,12 @@ const Form = styled.form`
     &::placeholder {
       color: black;
     }
+    @media (max-height: 400px) {
+      height:10vh;  }
   }
   input[type="submit"] {
     width: 60%;
     margin: 0% 20%;
-  }
-  @media (max-width: 800px) {
-    margin: 5%;
   }
 `;
 const Textarea = styled.textarea`
@@ -81,6 +84,7 @@ const Features = styled.div`
   display: flex;
   justify-content: space-between;
   width: 90%;
+  background-color:green;
   @media (max-width: 800px) {
     margin: 0% 5%;
   }
@@ -113,7 +117,7 @@ const MapDiv = styled.div`
 width:50%;
 height:100%;
 @media (max-width: 800px) {
-  width: 100%;
+  display:none
 }
 `;
 
