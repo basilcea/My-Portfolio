@@ -94,17 +94,15 @@ h2{
 }
 @media(max-width:1024px){
     width:90%;
+    height:96vh;
     margin:0 5%;
     h2{
         margin-top:10%;
         margin-left:5%;
     }
 }
-@media(max-width:1023px){
+@media(max-width:800px){
     height:100%;
-}
-@media(max-width:1200px){
-    height:92vh;
 }
 
 `

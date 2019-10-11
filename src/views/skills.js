@@ -48,7 +48,7 @@ const Container = styled.div`
     margin-left:15%;
     margin-top:5%;
     @media (max-width:1200px) {
-      height:89vh;
+      height:89.3vh;
     }
     @media (max-height:600px) {
       height:100%;
