@@ -157,7 +157,7 @@ const Skills = (props) => {
       </ScrollAnimation>
       <Lower>
         <FirstPart>
-          <ScrollAnimation animateIn="fadeIn">
+          <ScrollAnimation animateIn="fadeInUp">
             <h2>TECHNICAL SKILLS</h2>
             <Div>
             <span>Programming</span>
