@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import styled from "styled-components";
 import developer from "../assests/developer.png";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -14,6 +14,7 @@ const Container = styled.div`
     flex-direction:column;
     margin:0%;
     width:100%;
+    height:100%;
   }
   }
 
@@ -122,8 +123,12 @@ const styledAnimate = {
   height: "100%"
 };
 
-const About = () => {
+const About = (props) => {
+  useEffect(()=>{
+    props.setLocation('about')
+  },[])
   return (
+    
     <Container>
       <ScrollAnimation animateIn="fadeIn" style={styledAnimate}>
         <Side></Side>

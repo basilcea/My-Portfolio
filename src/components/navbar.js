@@ -1,6 +1,6 @@
-import React ,{useState} from 'react';
+import React ,{useState, useEffect} from 'react';
 import styled from 'styled-components';
-import {NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom';
 
 const Container = styled.div `
     width:7%;
@@ -11,7 +11,8 @@ const Container = styled.div `
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index:+3;
     @media(max-width: 800px){
-        display:none;
+        ${props => (props.menu ? `display:block`:`display:none`)};
+        width:20%;
     }
 `
 const NavTab = styled.div `
@@ -43,18 +44,18 @@ a{  height:100%;
 
 `
 const Navbar = (props) => {
-    const [active, setActive] = useState('home')
+    const [active, setActive] = useState(props.location || 'home')
     const onclicked=(value)=>{
         setActive(value)
     }
     return(
-        <Container>
-            {console.log(active)}
+        <Container menu={props.menu}>
             <NavTab onClick={()=>onclicked('home')} active ={active} id='home' ><NavLink to ={'/'}>Home</NavLink></NavTab>
             <NavTab onClick={()=>onclicked('about')}  active ={active} id ='about'><NavLink to ={'/about'} >About</NavLink></NavTab>
             <NavTab onClick={()=>onclicked('skills')}  active ={active} id='skills'><NavLink to ={'/skills'}>Skills</NavLink></NavTab>
             <NavTab onClick={()=>onclicked('projects')}  active ={active} id='projects'><NavLink to={'/projects'}>Projects</NavLink></NavTab>
             <NavTab onClick={()=>onclicked('contact')}  active ={active} id='contact'><NavLink to={'/contact'}>Contact</NavLink></NavTab>
+  
         </Container>
     )
 }

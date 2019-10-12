@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import styled from "styled-components";
 import Skillcard from "../components/cards/skills";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -141,7 +141,10 @@ margin-left:40%;
 }
 
 `
-const Skills = () => {
+const Skills = (props) => {
+  useEffect(()=>{
+    props.setLocation('skills')
+  },[])
   return (
     <Container>
       <ScrollAnimation animateIn="fadeInUp" >

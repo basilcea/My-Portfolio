@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 import icon from "../assests/icon.png";
@@ -209,7 +209,10 @@ const Name = styled.div`
   }
 `;
 dotenv.config();
-const Home = () => {
+const Home = (props) => {
+  useEffect(()=>{
+    props.setLocation('home')
+  },props)
   return (
     <Container>
       <Hero>

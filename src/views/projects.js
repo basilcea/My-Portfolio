@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import Project from  '../components/cards/project'
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -127,7 +127,10 @@ const ProjectsDiv = styled.div`
         margin:0 5%;
     }
 `;
-const Projects = ()=> {
+const Projects = (props)=> {
+    useEffect(()=>{
+        props.setLocation('projects')
+      },[])
     return (
         <Container>
                <ScrollAnimation animateIn="fadeInUp" style={{ width: "100%" }}>

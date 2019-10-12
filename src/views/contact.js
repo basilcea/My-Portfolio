@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -143,28 +143,36 @@ const encode = data => {
     .join("&");
 };
 
-class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { name: "", email: "", message: "" };
-  }
 
-  change = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
 
-  handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
+
+
+  const Contact = (props)=> {
+ 
+    useEffect(()=>{
+      props.setLocation('contact')
+    },[])
+    const [details, setDetails] = useState({
+      name:'',
+      email:'',
+      message:''
     })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
-
-    e.preventDefault();
-  };
-  render() {
+    const change = e => {
+      setDetails({
+        [e.target.name]: e.target.value 
+      })
+    }
+    const handleSubmit = e => {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...details })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+  
+      e.preventDefault();
+    };
     return (
       <Container>
    
@@ -190,28 +198,28 @@ class Contact extends React.Component {
                   <FaCheckCircle /> Back-end{" "}
                 </Activity>
               </Features>
-              <Form onSubmit={this.handleSubmit}>
+              <Form onSubmit={handleSubmit}>
                 <input
                   type="email"
-                  value={this.state.email}
+                  value={details.email}
                   name="email"
                   placeholder="Your Email"
-                  onChange={this.change}
+                  onChange={change}
                   required
                 />
                 <input
                   type="text"
-                  value={this.state.name}
+                  value={details.name}
                   name="name"
                   placeholder="Your Name"
-                  onChange={this.change}
+                  onChange={change}
                   required
                 />
                 <Textarea
                   name="message"
-                  value={this.state.message}
+                  value={details.message}
                   placeholder="Your Message"
-                  onChange={this.change}
+                  onChange={change}
                   required
                 />
                 <input type="submit" value="Send Message" />
@@ -241,5 +249,5 @@ class Contact extends React.Component {
       </Container>
     );
   }
-}
+
 export default Contact;
