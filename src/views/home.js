@@ -224,7 +224,7 @@ const Home = () => {
               strings={[
                 "A Frontend Engineer",
                 "A Backend Engineer",
-                "A Fullstack Engineer",
+                "A Full Stack Engineer",
                 "A Software Engineer"
               ]}
               typespeed={100}
