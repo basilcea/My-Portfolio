@@ -44,17 +44,17 @@ a{  height:100%;
 
 `
 const Navbar = (props) => {
-    const [active, setActive] = useState(props.location || 'home')
+    const [active, setActive] = useState('')
     const onclicked=(value)=>{
         setActive(value)
     }
     return(
         <Container menu={props.menu}>
-            <NavTab onClick={()=>onclicked('home')} active ={active} id='home' ><NavLink to ={'/'}>Home</NavLink></NavTab>
-            <NavTab onClick={()=>onclicked('about')}  active ={active} id ='about'><NavLink to ={'/about'} >About</NavLink></NavTab>
-            <NavTab onClick={()=>onclicked('skills')}  active ={active} id='skills'><NavLink to ={'/skills'}>Skills</NavLink></NavTab>
-            <NavTab onClick={()=>onclicked('projects')}  active ={active} id='projects'><NavLink to={'/projects'}>Projects</NavLink></NavTab>
-            <NavTab onClick={()=>onclicked('contact')}  active ={active} id='contact'><NavLink to={'/contact'}>Contact</NavLink></NavTab>
+            <NavTab onClick={()=>onclicked('home')} active ={active|| props.location} id='home' ><NavLink to ={'/'}>Home</NavLink></NavTab>
+            <NavTab onClick={()=>onclicked('about')}  active ={active|| props.location} id ='about'><NavLink to ={'/about'} >About</NavLink></NavTab>
+            <NavTab onClick={()=>onclicked('skills')}  active ={active || props.location} id='skills'><NavLink to ={'/skills'}>Skills</NavLink></NavTab>
+            <NavTab onClick={()=>onclicked('projects')}  active ={active || props.location} id='projects'><NavLink to={'/projects'}>Projects</NavLink></NavTab>
+            <NavTab onClick={()=>onclicked('contact')}  active ={active || props.location} id='contact'><NavLink to={'/contact'}>Contact</NavLink></NavTab>
   
         </Container>
     )

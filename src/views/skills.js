@@ -173,7 +173,7 @@ const Skills = (props) => {
           </ScrollAnimation>
         </FirstPart>
         <SecondPart>
-        <ScrollAnimation animateIn="fadeIn">
+        <ScrollAnimation animateIn="fadeInUp">
             <h2>TOOLS</h2>
             <ToolKit>
               <Tools style={{ backgroundImage: `url(${Html})` }} />
