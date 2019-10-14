@@ -261,7 +261,7 @@ const Home = (props) => {
             <a href="https://dev.to/basilcea">
               <FaDev />
             </a>
-            <a href="https://medium.com/@ogbonnabasil">
+            <a href="https://medium.com/@basilcea">
               <FaMedium />
             </a>
           </Socials>
