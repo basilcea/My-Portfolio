@@ -80,7 +80,7 @@ const data = [{
         'Built API consumed by front-end using Node JS, Express , and POSTGRES',
     ],
     github:'https://github.com/kids-fly/backend',
-    web:'https://kidsfly.netlify.com',
+    web:'https://kidsflyapi.herokuapp.com',
 }]
 const Container = styled.div`
 width:85%;
