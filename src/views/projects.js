@@ -20,8 +20,8 @@ const data = [{
         'Built responsive front-end using vanilla Javascript and CSS Modules',
         'Built API consumed by front-end using NODE JS, EXPRESS , and SQL',
     ],
-    github:'',
-    web:'',
+    github:'https://github.com/basilcea/askLite',
+    web:'https://asklite.netlify.com',
 },
 {   id:2,
     name:'Where To Code',
@@ -32,7 +32,7 @@ const data = [{
         'Created authentication, validation and controllers in backend API',
         'Ensured jest front and backend testing, continous integration and code coverage' 
     ],
-    github:'',
+    github:'https://github.com/where-to-code',
     web:'https://wheretocode.com',
 },
 {   id:3,
@@ -44,7 +44,7 @@ const data = [{
         'Built responsive front-end for web app  using React components',
         'Ensured state management using Redux and Private Routing using react-router',
     ],
-    github:'',
+    github:'https://github.com/build-week-weight-journal/weight-journal-FE',
     web:'https://lifted.netlify.com',
 },
 {id:4,
@@ -56,7 +56,7 @@ const data = [{
         'Created responsive marketing page for web app',
         'Created About us page for details about the app and team',
     ],
-    github:'',
+    github:'https://github.com/reading-recommender/basil-ogbonna-ui',
     web:'https://ceareads.netlify.com',
 },
 {id:5,
@@ -68,7 +68,7 @@ const data = [{
         'Built responsive front-end using Gatsby',
         'Used CSS Modules for styling'
     ],
-    github:'',
+    github:'https://github.com/basilcea/IDoJAMStack',
     web:'https://preciouso.netlify.com',
 },
 {id:6,
@@ -79,7 +79,7 @@ const data = [{
     responsibilities:[
         'Built API consumed by front-end using Node JS, Express , and POSTGRES',
     ],
-    github:'',
+    github:'https://github.com/kids-fly/backend',
     web:'https://kidsfly.netlify.com',
 }]
 const Container = styled.div`
