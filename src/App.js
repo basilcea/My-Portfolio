@@ -1,30 +1,34 @@
-import React from 'react';
+import React ,{useState}from 'react';
 import styled from 'styled-components';
+import Home from './views/home';
+import About from './views/about'
+import Skills from './views/skills'
+import Projects from './views/projects'
+import Navbar from './components/navbar';
+import Contact from './views/contact';
 import './App.css'
-import LandingPage from './components/landingPage/pageContainer';
+import {Route} from 'react-router-dom';
 const AppContainer = styled.div`
+  display:flex;
   width:100%;
-  margin-top:1% ;
+  height:100%;
+  flex-direction:column;
+  margin-top:0% ;
   @media(max-width:750px){
     margin-top:0%;
   }
 
 `;
-class App extends React.Component{
-  constructor(props){
-    super(props)
-    this.state =({
-
-    })
-
-  }
-  render(){
+const App = () =>{
     return (
       <AppContainer>
-      <LandingPage />
+        <Navbar/>
+        <Route exact path ='/'  render={() => <Home />} />
+        <Route path ='/about' component={About} />
+        <Route path ='/skills' component={Skills} />
+        <Route path ='/contact' component={Contact} />
+        <Route path='/projects' component={Projects} />
       </AppContainer>
     );
   }
-}
-
 export default App;
