@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Project from  '../components/cards/project'
 import ScrollAnimation from 'react-animate-on-scroll';
 import wheretocode from '../assests/logo.png'
-import asklite from '../assests/logo(1).png'
+import politico from '../assests/logo(1).png'
 import rr from '../assests/logo(3).png'
 import lifted from '../assests/logo(4).png'
 import kidsfly from '../assests/logo(5).png'
@@ -12,28 +12,38 @@ import "../animate.css";
 
 const data = [{
     id:1,
-    name:'Asklite',
-    icon:asklite,
-    description:'A question and answer web forum for developers',
-    stack:['POSTGRES', 'EXPRESS' , 'CSS MODULES', 'NODE'],
-    responsibilities:[
-        'Built responsive front-end using vanilla Javascript and CSS Modules',
-        'Built API consumed by front-end using NODE JS, EXPRESS , and SQL',
-    ],
-    github:'https://github.com/basilcea/askLite',
-    web:'https://asklite.netlify.com',
-},
-{   id:2,
     name:'Where To Code',
     icon:wheretocode,
     description:'A web app to help remote developers find places to code. ',
-    stack:['POSTGRES','EXPRESS' , 'REACT', 'NODE'],
+    stack:['POSTGRES', 'EXPRESS' , 'REACT', 'NODE'],
     responsibilities:[
         'Created authentication, validation and controllers in backend API',
         'Ensured jest front and backend testing, continous integration and code coverage' 
     ],
     github:'https://github.com/where-to-code',
     web:'https://wheretocode.com',
+},
+{   id:2,
+    name:'Politico',
+    icon:politico,
+    description:'A online voting platform',
+    stack:['POSTGRE', 'EXPRESS' , 'VANILLA JS' , 'NODE'],
+    responsibilities:['Build out backend for the app using node, postgres and raw sql' ,
+'Built front-end using vanilla javascript and css'],
+    github:'https://github.com/basilcea/Politico',
+    web:'https://ceapolitico.netlify.com',
+},
+{id:5,
+    icon:portfolio,
+    name:'Portfolio Pages',
+    description:'A virtual assistant portfolio page built using Gatsby markup generators',
+    stack:['REACT','CSS MODULES', 'GATSBY' , 'CONTEXT'],
+    responsibilities:[
+        'Built responsive front-end using Gatsby',
+        'Used CSS Modules for styling'
+    ],
+    github:'https://github.com/basilcea/IDoJAMStack',
+    web:'https://preciouso.netlify.com',
 },
 {   id:3,
     icon:lifted,
@@ -59,18 +69,7 @@ const data = [{
     github:'https://github.com/reading-recommender/basil-ogbonna-ui',
     web:'https://ceareads.netlify.com',
 },
-{id:5,
-    icon:portfolio,
-    name:'Portfolio Pages',
-    description:'A virtual assistant portfolio page built using Gatsby markup generators',
-    stack:['REACT','CSS MODULES', 'GATSBY' , 'CONTEXT'],
-    responsibilities:[
-        'Built responsive front-end using Gatsby',
-        'Used CSS Modules for styling'
-    ],
-    github:'https://github.com/basilcea/IDoJAMStack',
-    web:'https://preciouso.netlify.com',
-},
+
 {id:6,
     icon:kidsfly,
     name:'Kids Fly',
@@ -91,6 +90,9 @@ h2{
     width:85%;
     text-align:center;
     color:rgb(32, 53, 67);
+}a{
+    color:rgb(32, 53, 67);
+    font-weight:bold;
 }
 @media(max-width:1024px){
     width:90%;
@@ -140,6 +142,8 @@ const Projects = (props)=> {
                 data.map(project => <Project key={project.id}  data={project}/>)
             }
             </ProjectsDiv>
+            <p>Other Projects Include  <a href='https://cea-instagram-clone.netlify.com/'>Instagram Clone</a>, <a href='https://ceawars.netlify.com/'>React Wars</a> - a react snippet of star wars characters and <a href='https://mud-game-lambda.netlify.com/'>Adventure House </a> 
+              - a game built with django and react</p>
         </ScrollAnimation>
         </Container>
     )
