@@ -12,7 +12,7 @@ const Container = styled.div `
     z-index:+3;
     @media(max-width: 800px){
         ${props => (props.menu ? `display:block`:`display:none`)};
-        width:20%;
+        width:70%;
     }
 `
 const NavTab = styled.div `
@@ -47,6 +47,7 @@ const Navbar = (props) => {
     const [active, setActive] = useState('')
     const onclicked=(value)=>{
         setActive(value)
+        props.menuClicked()
     }
     return(
         <Container menu={props.menu}>

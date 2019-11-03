@@ -3,8 +3,6 @@ import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 import icon from "../assests/icon.png";
 import "../animate.css";
-// // import pdf from "../assests/Ogbonna Basil C.pdf";
-// import axios from "axios";
 import Typed from "react-typed";
 import dotenv from "dotenv";
 import {
@@ -28,6 +26,7 @@ const Container = styled.div`
     flex-direction: column;
     margin-left: 0;
     width: 100%;
+    height: 97vh;
   }
   @media(max-height:450px){
     flex-direction:row

@@ -92,7 +92,7 @@ background-repeat:no-repeat;
 @media(max-width:600px){
   height:40vh;
   width:100%;
-  background-size:100%;
+  background-size:120% 100%;
   margin-bottom:1%;
 }
 @media(max-height:450px){

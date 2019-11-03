@@ -79,7 +79,7 @@ const data = [{
         'Implemented Algorithm for the dynamic creation of the room',
         'Designed the front-end for the game'
     ],
-    github:'',
+    github:'https://github.com/CSEU2-BW',
     web:'https://mud-game-lambda.netlify.com/',
 }]
 const Container = styled.div`
@@ -144,9 +144,8 @@ const Projects = (props)=> {
             {
                 data.map(project => <Project key={project.id}  data={project}/>)
             }
-            </ProjectsDiv>
             <P>Other Projects Include  <a href='https://cea-instagram-clone.netlify.com/'>Instagram Clone</a>, <a href='https://ceawars.netlify.com/'>React Wars</a> and <a href='https://kidsflyapi.herokuapp.com'>Kids Fly API</a></P>
-             
+            </ProjectsDiv>
         </ScrollAnimation>
         </Container>
     )
