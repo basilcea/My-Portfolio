@@ -120,7 +120,6 @@ const Div = styled.div`
   width: 50%;
   @media (max-width: 800px) {
     width: 100%;
-    height:90vh;
   }
   @media (max-height: 450px) {
     height:100vh;
