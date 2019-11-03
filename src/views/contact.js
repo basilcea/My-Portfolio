@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -7,7 +7,7 @@ import "../animate.css";
 const Container = styled.div`
   margin-left: 15%;
   width: 80%;
-  height: 100vh;
+  height: 96vh;
   display: flex;
   flex-direction: column;
   h2 {
@@ -17,6 +17,7 @@ const Container = styled.div`
     color: rgb(32, 53, 67);
     @media (max-width: 800px) {
       margin-top:5%;
+      width:100%;
     }
   }
   @media (max-width: 800px) {
@@ -36,8 +37,12 @@ const Form = styled.form`
   padding: 2% 5%;
   justify-content: space-between;
   @media (max-width: 800px) {
-    margin: 10% 5%;
+    margin: 5%;
     height:60vh;  }
+    @media (max-height: 450px) {
+      margin: 5%;
+      height:80vh;  
+    }
   
   input {
     background: none;
@@ -51,12 +56,16 @@ const Form = styled.form`
     &::placeholder {
       color: black;
     }
-    @media (max-height: 400px) {
+    @media (max-height: 450px) {
       height:10vh;  }
   }
   input[type="submit"] {
     width: 60%;
     margin: 0% 20%;
+    &:hover{
+      background-color:rgb(32, 53, 67);
+      color:white
+    }
   }
 `;
 const Textarea = styled.textarea`
@@ -84,7 +93,6 @@ const Features = styled.div`
   display: flex;
   justify-content: space-between;
   width: 90%;
-  background-color:green;
   @media (max-width: 800px) {
     margin: 0% 5%;
   }
@@ -98,6 +106,10 @@ const Activity = styled.div`
     font-size: 0.6em;
     align-items: center;
   }
+  @media(max-height: 450px){
+    font-size:0.8em;
+  }
+
 `;
 const Place = styled.div`
   display: flex;
@@ -111,6 +123,10 @@ const Div = styled.div`
   width: 50%;
   @media (max-width: 800px) {
     width: 100%;
+    height:90vh;
+  }
+  @media (max-height: 450px) {
+    height:100vh;
   }
 `;
 const MapDiv = styled.div`
@@ -127,37 +143,41 @@ const encode = data => {
     .join("&");
 };
 
-class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { name: "", email: "", message: "" };
-  }
 
-  change = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
 
-  handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
+
+
+  const Contact = (props)=> {
+ 
+    useEffect(()=>{
+      props.setLocation('contact')
+    },[])
+    const [details, setDetails] = useState({
+      name:'',
+      email:'',
+      message:''
     })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
-
-    e.preventDefault();
-  };
-  render() {
+    const change = e => {
+      setDetails({
+        [e.target.name]: e.target.value 
+      })
+    }
+    const handleSubmit = e => {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...details })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+  
+      e.preventDefault();
+    };
     return (
       <Container>
-        <ScrollAnimation
-          animateIn="fadeInUp"
-          animateOut="fadeOut"
-          style={{ height: "20%" }}
-        >
+   
           <h2>CONTACT ME</h2>
-        </ScrollAnimation>
+
         <Place>
           <Div>
             <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
@@ -178,28 +198,28 @@ class Contact extends React.Component {
                   <FaCheckCircle /> Back-end{" "}
                 </Activity>
               </Features>
-              <Form onSubmit={this.handleSubmit}>
+              <Form onSubmit={handleSubmit}>
                 <input
                   type="email"
-                  value={this.state.email}
+                  value={details.email}
                   name="email"
                   placeholder="Your Email"
-                  onChange={this.change}
+                  onChange={change}
                   required
                 />
                 <input
                   type="text"
-                  value={this.state.name}
+                  value={details.name}
                   name="name"
                   placeholder="Your Name"
-                  onChange={this.change}
+                  onChange={change}
                   required
                 />
                 <Textarea
                   name="message"
-                  value={this.state.message}
+                  value={details.message}
                   placeholder="Your Message"
-                  onChange={this.change}
+                  onChange={change}
                   required
                 />
                 <input type="submit" value="Send Message" />
@@ -221,6 +241,7 @@ class Contact extends React.Component {
                 height: "95%",
                 allowFullScreen: ""
               }}
+              title='location'
             />
           </ScrollAnimation>
           </MapDiv>
@@ -228,5 +249,5 @@ class Contact extends React.Component {
       </Container>
     );
   }
-}
+
 export default Contact;

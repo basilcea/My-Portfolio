@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import styled from "styled-components";
 import Skillcard from "../components/cards/skills";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -43,10 +43,21 @@ const skills = [
 const Container = styled.div`
     display:flex;
     flex-direction:column;
-    height:100%;
+    height:87.2vh;
     width: 85%;
     margin-left:15%;
     margin-top:5%;
+    @media (max-width:1200px) {
+      height:89.3vh;
+    }
+    @media (max-height:600px) {
+      height:100%;
+    }
+    
+    @media (max-width: 600px) {
+      height:100%;
+    }
+    
   h2{
       font-size:1.5em;
       color:rgb(32, 53, 67);
@@ -54,6 +65,7 @@ const Container = styled.div`
   }
   @media(max-width:800px){
   width:100%;
+  height:100%;
   margin-left:5%
   }
   
@@ -129,7 +141,10 @@ margin-left:40%;
 }
 
 `
-const Skills = () => {
+const Skills = (props) => {
+  useEffect(()=>{
+    props.setLocation('skills')
+  },[])
   return (
     <Container>
       <ScrollAnimation animateIn="fadeInUp" >
@@ -142,7 +157,7 @@ const Skills = () => {
       </ScrollAnimation>
       <Lower>
         <FirstPart>
-          <ScrollAnimation animateIn="fadeIn">
+          <ScrollAnimation animateIn="fadeInUp">
             <h2>TECHNICAL SKILLS</h2>
             <Div>
             <span>Programming</span>
@@ -158,7 +173,7 @@ const Skills = () => {
           </ScrollAnimation>
         </FirstPart>
         <SecondPart>
-        <ScrollAnimation animateIn="fadeIn">
+        <ScrollAnimation animateIn="fadeInUp">
             <h2>TOOLS</h2>
             <ToolKit>
               <Tools style={{ backgroundImage: `url(${Html})` }} />

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import styled from "styled-components";
 import developer from "../assests/developer.png";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -7,13 +7,14 @@ const Container = styled.div`
   width: 85%;
   margin-left: 15%;
   display: flex;
-  height:100vh;
+  height:96vh;
   justify-content: space-between;
   align-items: center;
-  @media(max-width:1024px){
+  @media(max-width:1023px){
     flex-direction:column;
     margin:0%;
     width:100%;
+    height:100%;
   }
   }
 
@@ -23,9 +24,20 @@ const Details = styled.div`
   margin-right: 10%;
   margin-top: 5%;
   text-align: justify;
+
+  @media (max-width: 1024px) {
+    height:100%;
+  }
   @media (max-width: 800px) {
     width: 90%;
+    height:55.5vh;
     margin-right: 0%;
+  }
+    @media (max-width: 600px) {
+    height:100%;
+  }
+  @media (max-height: 450px) {
+    height:100%;
   }
   h2 {
     color: rgb(32, 53, 67);
@@ -33,7 +45,7 @@ const Details = styled.div`
     @media (max-width: 800px) {
       text-align: center;
     }
-    @media (max-height: 400px) {
+    @media (max-height: 450px) {
       text-align: left;
     }
   }
@@ -48,7 +60,7 @@ const Details = styled.div`
       font-size: 0.5em;
       padding: 0%;
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1023px) {
       font-size: 1em;
     }
   }
@@ -83,13 +95,13 @@ background-repeat:no-repeat;
   background-size:100%;
   margin-bottom:1%;
 }
-@media(max-height:400px){
+@media(max-height:450px){
   height:50vh;
   margin-left:5%;
   background-size:100%;
   width:100%;
 }
-@media(min-height:1024px){
+@media(min-height:1023px){
   height:40vh;
   margin-left:10%;
   background-size:100%;
@@ -101,7 +113,7 @@ const Initial = styled.div`
     padding-top: 5%;
     text-align: center;
   }
-  @media (max-height: 400px) {
+  @media (max-height: 450px) {
     padding-top: 5%;
     text-align: left;
   }
@@ -111,8 +123,12 @@ const styledAnimate = {
   height: "100%"
 };
 
-const About = () => {
+const About = (props) => {
+  useEffect(()=>{
+    props.setLocation('about')
+  },[])
   return (
+    
     <Container>
       <ScrollAnimation animateIn="fadeIn" style={styledAnimate}>
         <Side></Side>

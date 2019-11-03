@@ -19,7 +19,7 @@ transform-style: preserve-3d;
     margin-bottom:5%;
     height:40vh;
 }
-@media(max-width:1024){
+@media(max-width:1023){
     width:33%;
 }
 @media(max-height:400px){
@@ -64,7 +64,7 @@ div{
 `;
 const Button=styled.button`
     width:30%;
-    height:50%;
+    height:60%;
     outline:none;
     float:right;
     border-radius:5px;
@@ -101,6 +101,10 @@ const Highlights = styled.div`
 display:flex;
 flex-direction:column;
 font-size:0.8em;
+@media(max-width:1024px){
+    display:none;
+}
+}
 p{
     margin:0%;
     color:white;
@@ -159,7 +163,7 @@ const Project = props => {
   return (
     <Container transformed={transformStatus}>
         <FrontDiv>
-            <ScrollAnimation animateIn="fadeIn" style={{height:'70%'}}>
+            <ScrollAnimation animateIn="fade" style={{height:'70%'}}>
       <img src={props.data.icon} alt=""/>
       </ScrollAnimation>
       <Details>
