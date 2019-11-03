@@ -26,7 +26,7 @@ const data = [{
 {   id:2,
     name:'Politico',
     icon:politico,
-    description:'A online voting platform',
+    description:'An online voting platform',
     stack:['POSTGRE', 'EXPRESS' , 'VANILLA JS' , 'NODE'],
     responsibilities:['Build out backend for the app using node, postgres and raw sql' ,
 'Built front-end using vanilla javascript and css'],
@@ -72,14 +72,15 @@ const data = [{
 
 {id:6,
     icon:kidsfly,
-    name:'Kids Fly',
-    description:'An app that enables parents flying with kids, a hassle free flight.',
-    stack:['REACT' , 'POSTGRES', 'NODE' , 'REDUX'],
+    name:'Adventure House',
+    description:'A multi-user real-time virtual world game where players can transverse rooms in four directions',
+    stack:['REACT' , 'DJANGO', 'PYTHON' , 'REDUX'],
     responsibilities:[
-        'Built API consumed by front-end using Node JS, Express , and POSTGRES',
+        'Implemented Algorithm for the dynamic creation of the room',
+        'Designed the front-end for the game'
     ],
-    github:'https://github.com/kids-fly/backend',
-    web:'https://kidsflyapi.herokuapp.com',
+    github:'',
+    web:'https://mud-game-lambda.netlify.com/',
 }]
 const Container = styled.div`
 width:85%;
@@ -129,6 +130,8 @@ const ProjectsDiv = styled.div`
         margin:0 5%;
     }
 `;
+const P = styled.p`
+text-align:center`;
 const Projects = (props)=> {
     useEffect(()=>{
         props.setLocation('projects')
@@ -142,8 +145,8 @@ const Projects = (props)=> {
                 data.map(project => <Project key={project.id}  data={project}/>)
             }
             </ProjectsDiv>
-            <p>Other Projects Include  <a href='https://cea-instagram-clone.netlify.com/'>Instagram Clone</a>, <a href='https://ceawars.netlify.com/'>React Wars</a> - a react snippet of star wars characters and <a href='https://mud-game-lambda.netlify.com/'>Adventure House </a> 
-              - a game built with django and react</p>
+            <P>Other Projects Include  <a href='https://cea-instagram-clone.netlify.com/'>Instagram Clone</a>, <a href='https://ceawars.netlify.com/'>React Wars</a> and <a href='https://kidsflyapi.herokuapp.com'>Kids Fly API</a></P>
+             
         </ScrollAnimation>
         </Container>
     )
