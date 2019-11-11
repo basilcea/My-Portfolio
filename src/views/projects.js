@@ -145,7 +145,7 @@ const Projects = (props)=> {
             {
                 data.map(project => <Project key={project.id}  data={project}/>)
             }
-            <P>Other Projects Include  <a href='https://cea-instagram-clone.netlify.com/'>Instagram Clone</a>, <a href='https://ceawars.netlify.com/'>React Wars</a> and <a href='https://kidsflyapi.herokuapp.com'>Kids Fly API</a></P>
+            <P>Other Projects Include <a href='https://ceawars.netlify.com/'>React Wars</a> and <a href='https://kidsflyapi.herokuapp.com'>Kids Fly API</a></P>
             </ProjectsDiv>
         </ScrollAnimation>
         </Container>
