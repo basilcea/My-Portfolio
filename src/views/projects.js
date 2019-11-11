@@ -45,43 +45,44 @@ const data = [{
     github:'https://github.com/basilcea/IDoJAMStack',
     web:'https://preciouso.netlify.com',
 },
-{   id:3,
-    icon:lifted,
-    name:'Lifted',
-    description:'A weight lifting journal for users to track their weight lifting progress',
-    stack:['REACT', 'REDUX' , 'EXPRESS', 'NODE'],
-    responsibilities:[
-        'Built responsive front-end for web app  using React components',
-        'Ensured state management using Redux and Private Routing using react-router',
-    ],
-    github:'https://github.com/build-week-weight-journal/weight-journal-FE',
-    web:'https://lifted.netlify.com',
-},
-{id:4,
-    icon:rr,
-    name:'Reading Recommender',
-    description:'A web app that recommends books based on user preferences',
-    stack:['JAVASCRIPT', 'HTML' , 'LESS', 'CSS'],
-    responsibilities:[
-        'Created responsive marketing page for web app',
-        'Created About us page for details about the app and team',
-    ],
-    github:'https://github.com/reading-recommender/basil-ogbonna-ui',
-    web:'https://ceareads.netlify.com',
-},
+// {   id:3,
+//     icon:lifted,
+//     name:'Lifted',
+//     description:'A weight lifting journal for users to track their weight lifting progress',
+//     stack:['REACT', 'REDUX' , 'EXPRESS', 'NODE'],
+//     responsibilities:[
+//         'Built responsive front-end for web app  using React components',
+//         'Ensured state management using Redux and Private Routing using react-router',
+//     ],
+//     github:'https://github.com/build-week-weight-journal/weight-journal-FE',
+//     web:'https://lifted.netlify.com',
+// },
+// {id:4,
+//     icon:rr,
+//     name:'Reading Recommender',
+//     description:'A web app that recommends books based on user preferences',
+//     stack:['JAVASCRIPT', 'HTML' , 'LESS', 'CSS'],
+//     responsibilities:[
+//         'Created responsive marketing page for web app',
+//         'Created About us page for details about the app and team',
+//     ],
+//     github:'https://github.com/reading-recommender/basil-ogbonna-ui',
+//     web:'https://ceareads.netlify.com',
+// },
 
-{id:6,
-    icon:kidsfly,
-    name:'Adventure House',
-    description:'A multi-user real-time virtual world game where players can transverse rooms in four directions',
-    stack:['REACT' , 'DJANGO', 'PYTHON' , 'REDUX'],
-    responsibilities:[
-        'Implemented Algorithm for the dynamic creation of the room',
-        'Designed the front-end for the game'
-    ],
-    github:'https://github.com/CSEU2-BW',
-    web:'https://mud-game-lambda.netlify.com/',
-}]
+// {id:6,
+//     icon:kidsfly,
+//     name:'Adventure House',
+//     description:'A multi-user real-time virtual world game where players can transverse rooms in four directions',
+//     stack:['REACT' , 'DJANGO', 'PYTHON' , 'REDUX'],
+//     responsibilities:[
+//         'Implemented Algorithm for the dynamic creation of the room',
+//         'Designed the front-end for the game'
+//     ],
+//     github:'https://github.com/CSEU2-BW',
+//     web:'https://mud-game-lambda.netlify.com/',
+// }
+]
 const Container = styled.div`
 width:85%;
 margin-left:15%;
