@@ -115,6 +115,7 @@ const ProjectsDiv = styled.div`
     justify-content:space-evenly;
     flex-wrap:wrap;
     width:90%;
+    align-items:center;
     height:100%;
     @media(max-width:1024px){
         margin-left:8%;
