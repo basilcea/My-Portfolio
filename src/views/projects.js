@@ -6,8 +6,8 @@ import wheretocode from '../assests/logo.png'
 import politico from '../assests/logo(1).png'
 import rr from '../assests/logo(3).png'
 import lifted from '../assests/logo(4).png'
-import kidsfly from '../assests/logo(5).png'
 import portfolio from '../assests/logo(6).png'
+import kidsfly from '../assests/logo(2).png'
 import "../animate.css";
 
 const data = [{
@@ -45,43 +45,55 @@ const data = [{
     github:'https://github.com/basilcea/IDoJAMStack',
     web:'https://preciouso.netlify.com',
 },
-{   id:3,
-    icon:lifted,
-    name:'Lifted',
-    description:'A weight lifting journal for users to track their weight lifting progress',
-    stack:['REACT', 'REDUX' , 'EXPRESS', 'NODE'],
-    responsibilities:[
-        'Built responsive front-end for web app  using React components',
-        'Ensured state management using Redux and Private Routing using react-router',
-    ],
-    github:'https://github.com/build-week-weight-journal/weight-journal-FE',
-    web:'https://lifted.netlify.com',
-},
-{id:4,
-    icon:rr,
-    name:'Reading Recommender',
-    description:'A web app that recommends books based on user preferences',
-    stack:['JAVASCRIPT', 'HTML' , 'LESS', 'CSS'],
-    responsibilities:[
-        'Created responsive marketing page for web app',
-        'Created About us page for details about the app and team',
-    ],
-    github:'https://github.com/reading-recommender/basil-ogbonna-ui',
-    web:'https://ceareads.netlify.com',
-},
-
 {id:6,
     icon:kidsfly,
-    name:'Adventure House',
-    description:'A multi-user real-time virtual world game where players can transverse rooms in four directions',
-    stack:['REACT' , 'DJANGO', 'PYTHON' , 'REDUX'],
+    name:'Kids Fly API',
+    description:'An app that enables parents flying with kids, a hassle free flight.',
+    stack:['REACT' , 'POSTGRES', 'NODE' , 'REDUX'],
     responsibilities:[
-        'Implemented Algorithm for the dynamic creation of the room',
-        'Designed the front-end for the game'
+        'Built API consumed by front-end using Node JS, Express , and POSTGRES',
     ],
-    github:'',
-    web:'https://mud-game-lambda.netlify.com/',
-}]
+    github:'https://github.com/kids-fly/backend',
+    web:'https://kidsflyapi.herokuapp.com',
+}
+// {   id:3,
+//     icon:lifted,
+//     name:'Lifted',
+//     description:'A weight lifting journal for users to track their weight lifting progress',
+//     stack:['REACT', 'REDUX' , 'EXPRESS', 'NODE'],
+//     responsibilities:[
+//         'Built responsive front-end for web app  using React components',
+//         'Ensured state management using Redux and Private Routing using react-router',
+//     ],
+//     github:'https://github.com/build-week-weight-journal/weight-journal-FE',
+//     web:'https://lifted.netlify.com',
+// },
+// {id:4,
+//     icon:rr,
+//     name:'Reading Recommender',
+//     description:'A web app that recommends books based on user preferences',
+//     stack:['JAVASCRIPT', 'HTML' , 'LESS', 'CSS'],
+//     responsibilities:[
+//         'Created responsive marketing page for web app',
+//         'Created About us page for details about the app and team',
+//     ],
+//     github:'https://github.com/reading-recommender/basil-ogbonna-ui',
+//     web:'https://ceareads.netlify.com',
+// },
+
+// {id:6,
+//     icon:kidsfly,
+//     name:'Adventure House',
+//     description:'A multi-user real-time virtual world game where players can transverse rooms in four directions',
+//     stack:['REACT' , 'DJANGO', 'PYTHON' , 'REDUX'],
+//     responsibilities:[
+//         'Implemented Algorithm for the dynamic creation of the room',
+//         'Designed the front-end for the game'
+//     ],
+//     github:'https://github.com/CSEU2-BW',
+//     web:'https://mud-game-lambda.netlify.com/',
+// }
+]
 const Container = styled.div`
 width:85%;
 margin-left:15%;
@@ -114,6 +126,7 @@ const ProjectsDiv = styled.div`
     justify-content:space-evenly;
     flex-wrap:wrap;
     width:90%;
+    align-items:center;
     height:100%;
     @media(max-width:1024px){
         margin-left:8%;
@@ -144,9 +157,8 @@ const Projects = (props)=> {
             {
                 data.map(project => <Project key={project.id}  data={project}/>)
             }
+            <P>Other Projects Include <a href='https://ceawars.netlify.com/'>React Wars</a> and <a href='https://mud-game-lambda.netlify.com/'>Adventure House</a></P>
             </ProjectsDiv>
-            <P>Other Projects Include  <a href='https://cea-instagram-clone.netlify.com/'>Instagram Clone</a>, <a href='https://ceawars.netlify.com/'>React Wars</a> and <a href='https://kidsflyapi.herokuapp.com'>Kids Fly API</a></P>
-             
         </ScrollAnimation>
         </Container>
     )

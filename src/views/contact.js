@@ -22,7 +22,7 @@ const Container = styled.div`
   }
   @media (max-width: 800px) {
     width: 100%;
-    height:100%
+    height:97vh;
     margin: 0;
   }
 `;
@@ -76,7 +76,7 @@ width: 100%;
   background-color: inherit;
   color: black;
   resize: none;
-  font-size: 1em;
+  font-size: 1rem;
   height: 20vh;
   padding-left: 5%;
   padding-top: 2%;
@@ -84,9 +84,6 @@ width: 100%;
   &::placeholder {
     color: black;
   }
-  @media(max-width:500px){
-      font-size:0.6em;
-    }
 }
 `;
 const Features = styled.div`
@@ -123,7 +120,6 @@ const Div = styled.div`
   width: 50%;
   @media (max-width: 800px) {
     width: 100%;
-    height:90vh;
   }
   @media (max-height: 450px) {
     height:100vh;

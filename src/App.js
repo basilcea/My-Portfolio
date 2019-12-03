@@ -8,7 +8,7 @@ import Navbar from './components/navbar';
 import Contact from './views/contact';
 import Footer from './views/footer'
 import './App.css'
-import {FaPowerOff} from 'react-icons/fa'
+import {FaBars} from 'react-icons/fa'
 import {Route} from 'react-router-dom';
 const AppContainer = styled.div`
   display:flex;
@@ -38,7 +38,6 @@ const Div = styled.div`
 const App = (props) =>{
   const [menu , setMenu] = useState(false)
   const menuClicked = () => {
-    
     setMenu (!menu)
   }
   const offMenu = ()=> {
@@ -52,8 +51,8 @@ const App = (props) =>{
     return (
       <AppContainer>
         <Div>
-        <FaPowerOff onClick ={menuClicked} />
-        <Navbar menu={menu} location={location}/>
+        <FaBars onClick ={menuClicked} />
+        <Navbar menu={menu} location={location} menuClicked ={offMenu}/>
         </Div>
         <div onClick ={offMenu}>
         <Route exact path ='/'  render={props => <Home  props={props} setLocation={getLocation}/>} />
