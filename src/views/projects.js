@@ -6,8 +6,8 @@ import wheretocode from '../assests/logo.png'
 import politico from '../assests/logo(1).png'
 import rr from '../assests/logo(3).png'
 import lifted from '../assests/logo(4).png'
-import kidsfly from '../assests/logo(5).png'
 import portfolio from '../assests/logo(6).png'
+import kidsfly from '../assests/logo(2).png'
 import "../animate.css";
 
 const data = [{
@@ -45,6 +45,17 @@ const data = [{
     github:'https://github.com/basilcea/IDoJAMStack',
     web:'https://preciouso.netlify.com',
 },
+{id:6,
+    icon:kidsfly,
+    name:'Kids Fly API',
+    description:'An app that enables parents flying with kids, a hassle free flight.',
+    stack:['REACT' , 'POSTGRES', 'NODE' , 'REDUX'],
+    responsibilities:[
+        'Built API consumed by front-end using Node JS, Express , and POSTGRES',
+    ],
+    github:'https://github.com/kids-fly/backend',
+    web:'https://kidsflyapi.herokuapp.com',
+}
 // {   id:3,
 //     icon:lifted,
 //     name:'Lifted',
@@ -146,7 +157,7 @@ const Projects = (props)=> {
             {
                 data.map(project => <Project key={project.id}  data={project}/>)
             }
-            <P>Other Projects Include <a href='https://ceawars.netlify.com/'>React Wars</a> and <a href='https://kidsflyapi.herokuapp.com'>Kids Fly API</a></P>
+            <P>Other Projects Include <a href='https://ceawars.netlify.com/'>React Wars</a> and <a href='https://mud-game-lambda.netlify.com/'>Adventure House</a></P>
             </ProjectsDiv>
         </ScrollAnimation>
         </Container>
