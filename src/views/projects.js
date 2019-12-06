@@ -49,7 +49,7 @@ const data = [{
     icon:kidsfly,
     name:'Kids Fly API',
     description:'An app that enables parents flying with kids, a hassle free flight.',
-    stack:['REACT' , 'POSTGRES', 'NODE' , 'REDUX'],
+    stack:['EXPRESS' , 'POSTGRES', 'NODE' , 'JEST'],
     responsibilities:[
         'Built API consumed by front-end using Node JS, Express , and POSTGRES',
     ],
