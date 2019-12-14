@@ -8,6 +8,7 @@ import rr from '../assests/logo(3).png'
 import lifted from '../assests/logo(4).png'
 import portfolio from '../assests/logo(6).png'
 import kidsfly from '../assests/logo(2).png'
+import AdventureHouse from '../assests/logo(5).png'
 import "../animate.css";
 
 const data = [{
@@ -80,19 +81,19 @@ const data = [{
 //     github:'https://github.com/reading-recommender/basil-ogbonna-ui',
 //     web:'https://ceareads.netlify.com',
 // },
-
-// {id:6,
-//     icon:kidsfly,
-//     name:'Adventure House',
-//     description:'A multi-user real-time virtual world game where players can transverse rooms in four directions',
-//     stack:['REACT' , 'DJANGO', 'PYTHON' , 'REDUX'],
-//     responsibilities:[
-//         'Implemented Algorithm for the dynamic creation of the room',
-//         'Designed the front-end for the game'
-//     ],
-//     github:'https://github.com/CSEU2-BW',
-//     web:'https://mud-game-lambda.netlify.com/',
-// }
+,
+{id:6,
+    icon:AdventureHouse,
+    name:'Adventure House',
+    description:'A multi-user real-time virtual world game where players can transverse rooms in four directions',
+    stack:['REACT' , 'DJANGO', 'PYTHON' , 'REDUX'],
+    responsibilities:[
+        'Implemented Algorithm for the dynamic creation of the room',
+        'Designed the front-end for the game'
+    ],
+    github:'https://github.com/CSEU2-BW',
+    web:'https://mud-game-lambda.netlify.com/',
+}
 ]
 const Container = styled.div`
 width:85%;
