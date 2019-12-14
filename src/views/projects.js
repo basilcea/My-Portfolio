@@ -158,8 +158,8 @@ const Projects = (props)=> {
             {
                 data.map(project => <Project key={project.id}  data={project}/>)
             }
-            <P>Other Projects Include <a href='https://ceawars.netlify.com/'>React Wars</a> and <a href='https://mud-game-lambda.netlify.com/'>Adventure House</a></P>
             </ProjectsDiv>
+            <P>Other Projects Include <a href='https://ceawars.netlify.com/'>React Wars</a> and <a href='https://lifted.netlify.com/'>Lifted</a></P>
         </ScrollAnimation>
         </Container>
     )
