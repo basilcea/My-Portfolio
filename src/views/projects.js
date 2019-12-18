@@ -4,9 +4,8 @@ import Project from  '../components/cards/project'
 import ScrollAnimation from 'react-animate-on-scroll';
 import wheretocode from '../assests/logo.png'
 import politico from '../assests/logo(1).png'
-import rr from '../assests/logo(3).png'
-import lifted from '../assests/logo(4).png'
 import portfolio from '../assests/logo(6).png'
+import reactwars from '../assests/logo(3).png';
 import kidsfly from '../assests/logo(2).png'
 import AdventureHouse from '../assests/logo(5).png'
 import "../animate.css";
@@ -56,32 +55,20 @@ const data = [{
     ],
     github:'https://github.com/kids-fly/backend',
     web:'https://kidsflyapi.herokuapp.com',
-}
-// {   id:3,
-//     icon:lifted,
-//     name:'Lifted',
-//     description:'A weight lifting journal for users to track their weight lifting progress',
-//     stack:['REACT', 'REDUX' , 'EXPRESS', 'NODE'],
-//     responsibilities:[
-//         'Built responsive front-end for web app  using React components',
-//         'Ensured state management using Redux and Private Routing using react-router',
-//     ],
-//     github:'https://github.com/build-week-weight-journal/weight-journal-FE',
-//     web:'https://lifted.netlify.com',
-// },
-// {id:4,
-//     icon:rr,
-//     name:'Reading Recommender',
-//     description:'A web app that recommends books based on user preferences',
-//     stack:['JAVASCRIPT', 'HTML' , 'LESS', 'CSS'],
-//     responsibilities:[
-//         'Created responsive marketing page for web app',
-//         'Created About us page for details about the app and team',
-//     ],
-//     github:'https://github.com/reading-recommender/basil-ogbonna-ui',
-//     web:'https://ceareads.netlify.com',
-// },
-,
+},
+{   id:3,
+    icon:reactwars,
+    name:'React Wars',
+    description:'A simple app providing details about star wars characters',
+    stack:['REACT', 'STYLED-COMPONENTS' , 'API', ],
+    responsibilities:[
+        'Built responsive front-end for web app  using React components',
+        'Used styled-components to ensure responsiveness',
+    ],
+    github:'https://github.com/basilcea/Sprint-Challenge-React-Wars',
+    web:'https://ceawars.netlify.com',
+},
+
 {id:6,
     icon:AdventureHouse,
     name:'Adventure House',
@@ -159,7 +146,6 @@ const Projects = (props)=> {
                 data.map(project => <Project key={project.id}  data={project}/>)
             }
             </ProjectsDiv>
-            <P>Other Projects Include <a href='https://ceawars.netlify.com/'>React Wars</a> and <a href='https://lifted.netlify.com/'>Lifted</a></P>
         </ScrollAnimation>
         </Container>
     )
