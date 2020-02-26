@@ -4,7 +4,7 @@ import Project from  '../components/cards/project'
 import ScrollAnimation from 'react-animate-on-scroll';
 import wheretocode from '../assests/logo.png'
 import politico from '../assests/logo(1).png'
-import portfolio from '../assests/logo(6).png'
+import lambdadoor from '../assests/logo(4).png'
 import reactwars from '../assests/logo(3).png';
 import kidsfly from '../assests/logo(2).png'
 import AdventureHouse from '../assests/logo(5).png'
@@ -34,16 +34,16 @@ const data = [{
     web:'https://ceapolitico.netlify.com',
 },
 {id:5,
-    icon:portfolio,
-    name:'Portfolio Pages',
-    description:'A virtual assistant portfolio page built using Gatsby markup generators',
-    stack:['REACT','CSS MODULES', 'GATSBY' , 'CONTEXT'],
+    icon:lambdadoor,
+    name:'Lambda Door',
+    description:'The one-stop portal for Lambda graduates looking for company information in the quest for a job',
+    stack:['POSTGRES','Express', 'React' , 'Node'],
     responsibilities:[
-        'Built responsive front-end using Gatsby',
-        'Used CSS Modules for styling'
+        'Lead the team that build the whole app',
+        'Lead user research for building the product '
     ],
-    github:'https://github.com/basilcea/IDoJAMStack',
-    web:'https://preciouso.netlify.com',
+    github:'https://github.com/LABS-EU3/lambdaDoor_backend',
+    web:'https://lamdadoor.com',
 },
 {id:6,
     icon:kidsfly,
