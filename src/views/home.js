@@ -14,13 +14,12 @@ import {
   FaLinkedin,
   FaGithub
 } from "react-icons/fa";
-import image from "../assests/image.png";
+import image from "../assests/image.jpg";
 const Container = styled.div`
   margin: 0;
   display: flex;
   align-items: center;
-  width: 90%;
-  margin-left: 2%;
+  width: 100%;
   height: 96vh;
   @media (max-width: 750px) {
     flex-direction: column;
@@ -34,7 +33,7 @@ const Container = styled.div`
 `;
 const Hero = styled.div`
   height: 50%;
-  width: 45%;
+  width: 50%;
   margin-left: 15%;
   @media (max-width: 750px) {
     width:90%;
@@ -136,15 +135,22 @@ const Socials = styled.div`
   }
 `;
 const ProfilePix = styled.div`
-  width: 55%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 50%;
+  display:flex;
+  align-items:center;
   height: 100%;
+  .profilePix{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+  }
   @media (max-width: 750px) {
     order: -1; 
     width: 100%;
-    height:45%;
+    height:50%;
   }
   @media(max-height:450px){
   order:0;
@@ -153,20 +159,17 @@ const ProfilePix = styled.div`
   }
 `;
 const OuterRadius = styled.div`
-    border-radius:50%
-    width:80%;
+    width:60%;
     height:60%;
-    background-color:rgb(32, 53, 67);
-    justify-content:center;
-    align-items:center;
-    display:flex;
-    @media(max-width:650px){
-      width:65%;
-      height:70%;
-    }
+  display:flex;
+  border-radius:10%;
+  justify-content:center;
+  align-items:center;
     img{
-      width:90%;
-      height:90%;
+      width:100%;
+      height:100%;
+      border-radius:10%;
+
   }
     `;
 const Name = styled.div`
@@ -227,9 +230,11 @@ const Home = (props) => {
                 "A Frontend Engineer",
                 "A Backend Engineer",
                 "A Full Stack Engineer",
-                "A Software Engineer"
+                "An Aspiring AI Engineer",
+                "A Software Engineer",
               ]}
               typespeed={100}
+              startDelay={100}
               fadeOut={true}
               showCursor={false}
             />
@@ -269,15 +274,9 @@ const Home = (props) => {
 
       <ProfilePix>
         <ScrollAnimation
+          className = 'profilePix'
           animateIn="fadeIn"
           animateOut="fadeOut"
-          style={{
-            height: "100%",
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
         >
           <OuterRadius>
             <img src={image} alt="" />
