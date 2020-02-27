@@ -80,7 +80,7 @@ const Details = styled.div`
   span {
     border: 2px solid rgb(32, 53, 67);
     border-raduis: 5px;
-    width: 18%;
+    width: 18.2%;
     margin-bottom: 5%;
     text-align: center;
     @media (max-width: 600px) {
@@ -111,7 +111,7 @@ img{
   height:60vh;
   margin-left:5%;
   background-size:100%;
-  width:100%;
+  width:90%;
 }
 @media(min-height:1023px){
   height:40vh;
@@ -179,13 +179,18 @@ const About = (props) => {
             <span>HTML</span>
             <span>CSS</span>
             <span>Javascript</span>
+            <span> Typescript</span>
+            <span>Python</span>
             <span>React</span>
             <span>Node Js</span>
             <span>REST</span>
             <span>GraphQl</span>
-            <span> API </span>
             <span>Postgres</span>
             <span>MongoDb</span>
+            <span>Django</span>
+            <span>Flask</span>
+            <span>AWS</span>
+            <span>Pytorch</span>
           </p>
         </ScrollAnimation>
       </Details>

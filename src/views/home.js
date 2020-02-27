@@ -32,7 +32,7 @@ const Container = styled.div`
   }
 `;
 const Hero = styled.div`
-  height: 50%;
+  height: 40%;
   width: 50%;
   margin-left: 15%;
   @media (max-width: 750px) {
@@ -144,7 +144,9 @@ const ProfilePix = styled.div`
     height:100%;
     display:flex;
     align-items:center;
-    justify-content:center;
+    @media (max-width: 750px){
+      justify-content:center;
+    }
 
   }
   @media (max-width: 750px) {
@@ -230,7 +232,7 @@ const Home = (props) => {
                 "A Frontend Engineer",
                 "A Backend Engineer",
                 "A Full Stack Engineer",
-                "An Aspiring AI Engineer",
+                "Aspiring AI Engineer",
                 "A Software Engineer",
               ]}
               typespeed={100}
