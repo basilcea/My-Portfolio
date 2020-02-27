@@ -9,6 +9,7 @@ import reactwars from "../assests/logo(3).png";
 import kidsfly from "../assests/logo(2).png";
 import AdventureHouse from "../assests/logo(5).png";
 import "../animate.css";
+import Footer from './footer'
 
 const data = [
   {

@@ -2,12 +2,12 @@ import React,{useEffect, useState} from "react";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa";
 import ScrollAnimation from "react-animate-on-scroll";
-
+import Footer from './footer';
 import "../animate.css";
 const Container = styled.div`
   margin-left: 15%;
   width: 80%;
-  height: 96vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   h2 {
@@ -22,7 +22,7 @@ const Container = styled.div`
   }
   @media (max-width: 800px) {
     width: 100%;
-    height:97vh;
+    height:100%;
     margin: 0;
   }
 `;
@@ -32,22 +32,17 @@ const Form = styled.form`
   flex-direction: column;
   border: 2px solid rgb(32, 53, 67);
   width: 90%;
-  height: 50vh;
+  height: 500px;
   margin: 5% 0%;
   padding: 2% 5%;
   justify-content: space-between;
   @media (max-width: 800px) {
     margin: 5%;
-    height:60vh;  }
-    @media (max-height: 450px) {
-      margin: 5%;
-      height:80vh;  
-    }
-  
+  }
   input {
     background: none;
     font-size: 1em;
-    height: 5vh;
+    height: 50px;
     border-radius: 10px;
     width: 100%;
     outline: none;
@@ -56,8 +51,6 @@ const Form = styled.form`
     &::placeholder {
       color: black;
     }
-    @media (max-height: 450px) {
-      height:10vh;  }
   }
   input[type="submit"] {
     width: 60%;
@@ -111,6 +104,7 @@ const Activity = styled.div`
 const Place = styled.div`
   display: flex;
   width: 100%;
+  height:100%;
   margin-top: 5%;
   @media (max-width: 800px) {
     flex-direction: column;
@@ -118,6 +112,12 @@ const Place = styled.div`
 `;
 const Div = styled.div`
   width: 50%;
+  .contactAnim{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }
   @media (max-width: 800px) {
     width: 100%;
   }
@@ -128,6 +128,9 @@ const Div = styled.div`
 const MapDiv = styled.div`
 width:50%;
 height:100%;
+.map{
+  height:100%;
+}
 @media (max-width: 800px) {
   display:none
 }
@@ -176,7 +179,7 @@ const encode = data => {
 
         <Place>
           <Div>
-            <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
+            <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut" className='contactAnim'>
               <Features>
                 <Activity>
                   <FaCheckCircle /> Remote{" "}
@@ -226,7 +229,7 @@ const encode = data => {
           <ScrollAnimation
             animateIn="fadeInUp"
             animateOut="fadeOut"
-            style={{height: "100%" }}
+            className ='map'
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15856.497204439343!2d3.3616950272125!3d6.50594572470166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c8c358b3f4b%3A0x5552cfbd43df8434!2sYaba%2C%20Oworonshoki!5e0!3m2!1sen!2sng!4v1570467602009!5m2!1sen!2sng"
