@@ -147,21 +147,21 @@ const encode = data => {
 
 
   const Contact = (props)=> {
- 
     useEffect(()=>{
       props.setLocation('contact')
     },[])
-    const [details, setDetails] = useState({
-      name:'',
-      email:'',
-      message:''
-    })
-    const change = e => {
-      setDetails({
-        [e.target.name]: e.target.value 
-      })
-    }
+    const [details, setDetails] = useState(
+      { name:'',email:'',message:'' })
+
+      const change = e => {
+        const target = e.target;
+        const value = target.value;
+        const name = target.name;
+        setDetails(details => ({ ...details, [name]: value }));
+      };
     const handleSubmit = e => {
+  
+      console.log(details)
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -169,14 +169,12 @@ const encode = data => {
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error));
-  
-      e.preventDefault();
+        e.preventDefault();
+ 
     };
     return (
       <Container>
-   
           <h2>CONTACT ME</h2>
-
         <Place>
           <Div>
             <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut" className='contactAnim'>
@@ -221,7 +219,7 @@ const encode = data => {
                   onChange={change}
                   required
                 />
-                <input type="submit" value="Send Message" />
+                <input type="submit"  value="Send Message" />
               </Form>
             </ScrollAnimation>
           </Div>
