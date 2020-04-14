@@ -35,6 +35,9 @@ const Div = styled.div`
  }
 
 `;
+const AnotherDiv = styled.div`
+height:80%;
+`;
 const App = (props) =>{
   const [menu , setMenu] = useState(false)
   const menuClicked = () => {
@@ -54,14 +57,13 @@ const App = (props) =>{
         <FaBars onClick ={menuClicked} />
         <Navbar menu={menu} location={location} menuClicked ={offMenu}/>
         </Div>
-        <div onClick ={offMenu}>
+        <AnotherDiv onClick ={offMenu}>
         <Route exact path ='/'  render={props => <Home  props={props} setLocation={getLocation}/>} />
         <Route path ='/about' render={props => <About props={props} setLocation={getLocation}/>} />
         <Route path ='/skills'  render={props => <Skills props={props} setLocation={getLocation}/>} />
         <Route path ='/contact'  render={props => <Contact props={props} setLocation={getLocation}/>} />
         <Route path='/projects'  render={props => <Projects props={props} setLocation={getLocation}/>} />
-        </div>
-        <Footer />
+        </AnotherDiv>
       </AppContainer>
     );
   }

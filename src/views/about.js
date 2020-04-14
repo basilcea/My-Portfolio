@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
 import styled from "styled-components";
-import developer from "../assests/developer.png";
+import developer from "../assests/developer.jpg";
 import ScrollAnimation from "react-animate-on-scroll";
 import "../animate.css";
 const Container = styled.div`
@@ -10,6 +10,13 @@ const Container = styled.div`
   height:96vh;
   justify-content: space-between;
   align-items: center;
+  .displayPix{
+    width:50%;
+    height:100%;
+    @media(max-width:1023px){
+      width:80%;
+    }
+  }
   @media(max-width:1023px){
     flex-direction:column;
     margin:0%;
@@ -73,7 +80,7 @@ const Details = styled.div`
   span {
     border: 2px solid rgb(32, 53, 67);
     border-raduis: 5px;
-    width: 18%;
+    width: 18.2%;
     margin-bottom: 5%;
     text-align: center;
     @media (max-width: 600px) {
@@ -83,12 +90,17 @@ const Details = styled.div`
   }
 `;
 const Side = styled.div`
-width: 100%
-background: url(${developer});
-height:80vh;
+width: 80%;
+background: green;
+height:70%;
+margin-top:30%;
 background-size:100%;
 background-position:center;
 background-repeat:no-repeat;
+img{
+  width:100%;
+  height:100%;
+}
 @media(max-width:600px){
   height:40vh;
   width:100%;
@@ -96,10 +108,10 @@ background-repeat:no-repeat;
   margin-bottom:1%;
 }
 @media(max-height:450px){
-  height:50vh;
+  height:60vh;
   margin-left:5%;
   background-size:100%;
-  width:100%;
+  width:90%;
 }
 @media(min-height:1023px){
   height:40vh;
@@ -118,10 +130,7 @@ const Initial = styled.div`
     text-align: left;
   }
 `;
-const styledAnimate = {
-  width: "45%",
-  height: "100%"
-};
+
 
 const About = (props) => {
   useEffect(()=>{
@@ -130,8 +139,10 @@ const About = (props) => {
   return (
     
     <Container>
-      <ScrollAnimation animateIn="fadeIn" style={styledAnimate}>
-        <Side></Side>
+      <ScrollAnimation animateIn="fadeIn" className="displayPix">
+        <Side>
+          <img src={developer} alt=''/>
+        </Side>
       </ScrollAnimation>
       <Details>
         <ScrollAnimation animateIn="fadeIn" style={{ width: "100%" }}>
@@ -168,13 +179,18 @@ const About = (props) => {
             <span>HTML</span>
             <span>CSS</span>
             <span>Javascript</span>
+            <span> Typescript</span>
+            <span>Python</span>
             <span>React</span>
             <span>Node Js</span>
             <span>REST</span>
             <span>GraphQl</span>
-            <span> API </span>
             <span>Postgres</span>
             <span>MongoDb</span>
+            <span>Django</span>
+            <span>Flask</span>
+            <span>AWS</span>
+            <span>Pytorch</span>
           </p>
         </ScrollAnimation>
       </Details>
