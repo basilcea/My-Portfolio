@@ -127,7 +127,6 @@ const Div = styled.div`
 `;
 const MapDiv = styled.div`
 width:50%;
-height:100%;
 .map{
   height:100%;
 }

@@ -91,7 +91,6 @@ const Details = styled.div`
 `;
 const Side = styled.div`
 width: 80%;
-background: green;
 height:70%;
 margin-top:30%;
 background-size:100%;
