@@ -24,7 +24,7 @@ const data = [
       "Lead user research for building the product "
     ],
     github: "https://github.com/LABS-EU3/lambdaDoor_backend",
-    web: "https://lamdadoor.com"
+    web: "https://lambdadoor.com"
   },
   {
     id: 2,
