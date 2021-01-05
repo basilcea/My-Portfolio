@@ -5,7 +5,7 @@
   "dependencies": {
     "@babel/runtime": "^7.9.2",
     "animate.css": "^3.7.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "googleapis": "^43.0.0",
     "prop-types": "^15.7.2",
